@@ -31,6 +31,46 @@ export const portfolioConstants = {
 
   skills: [
     {
+      category: "Frontend Engineering",
+      skills: [
+        { name: "Next.js", level: "Advanced" },
+        { name: "React", level: "Advanced" },
+        { name: "TypeScript", level: "Advanced" },
+        { name: "Tailwind CSS", level: "Advanced" }
+      ]
+    },
+    {
+      category: "Backend & Systems",
+      skills: [
+        { name: "Node.js", level: "Advanced" },
+        { name: "REST APIs", level: "Advanced" },
+        { name: "Authentication", level: "Advanced" }
+      ]
+    },
+    {
+      category: "Databases & ORM",
+      skills: [
+        { name: "Prisma ORM", level: "Advanced" },
+        { name: "SQL", level: "Intermediate" },
+        { name: "SQLite", level: "Advanced" }
+      ]
+    },
+    {
+      category: "AI & Intelligence",
+      skills: [
+        { name: "AI API Integration", level: "Advanced" },
+        { name: "Prompt Engineering", level: "Expert" }
+      ]
+    },
+    {
+      category: "Cloud & DevOps",
+      skills: [
+        { name: "AWS", level: "Intermediate" },
+        { name: "Vercel", level: "Advanced" },
+        { name: "GitHub", level: "Advanced" }
+      ]
+    },
+    {
       category: "Programming Languages",
       skills: [
         { name: "Python", level: "Advanced" },
@@ -40,57 +80,12 @@ export const portfolioConstants = {
       ]
     },
     {
-      category: "Frontend Engineering",
-      skills: [
-        { name: "Next.js 15", level: "Advanced" },
-        { name: "React", level: "Advanced" },
-        { name: "TypeScript", level: "Advanced" },
-        { name: "Tailwind CSS", level: "Advanced" },
-        { name: "HTML5 & CSS3", level: "Expert" }
-      ]
-    },
-    {
-      category: "Backend & Systems",
-      skills: [
-        { name: "Node.js", level: "Advanced" },
-        { name: "REST APIs", level: "Advanced" },
-        { name: "JWT Authentication", level: "Advanced" }
-      ]
-    },
-    {
-      category: "Databases & ORM",
-      skills: [
-        { name: "Prisma ORM", level: "Advanced" },
-        { name: "SQLite", level: "Advanced" },
-        { name: "SQL", level: "Intermediate" }
-      ]
-    },
-    {
-      category: "AI & Modern Workflows",
-      skills: [
-        { name: "OpenAI API", level: "Advanced" },
-        { name: "Claude API", level: "Advanced" },
-        { name: "AI Dev Workflows", level: "Advanced" },
-        { name: "Prompt Engineering", level: "Expert" }
-      ]
-    },
-    {
-      category: "Cloud & DevOps",
-      skills: [
-        { name: "AWS EC2", level: "Intermediate" },
-        { name: "AWS Cloud9", level: "Intermediate" },
-        { name: "Vercel", level: "Advanced" },
-        { name: "Git", level: "Advanced" },
-        { name: "GitHub", level: "Advanced" }
-      ]
-    },
-    {
       category: "CS Fundamentals",
       skills: [
-        { name: "Object-Oriented Programming (OOP)", level: "Advanced" },
-        { name: "Database Management Systems (DBMS)", level: "Advanced" },
+        { name: "OOP", level: "Advanced" },
+        { name: "DBMS", level: "Advanced" },
         { name: "Computer Networks", level: "Intermediate" },
-        { name: "Data Structures & Algorithms (DSA)", level: "Intermediate" }
+        { name: "Data Structures & Algorithms", level: "Intermediate" }
       ]
     }
   ] as SkillCategory[],

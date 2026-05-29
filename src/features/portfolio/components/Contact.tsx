@@ -2,11 +2,16 @@
 
 import React, { useState } from "react";
 import { Card } from "../../../components/ui/Card";
-import { Send, CheckCircle2, AlertCircle, Copy, Check } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, Copy, Check, FileText } from "lucide-react";
+import { Github, Linkedin } from "../../../components/common/Icons";
 import { portfolioConstants } from "../../../constants/portfolio";
 import confetti from "canvas-confetti";
 
-export const Contact: React.FC = () => {
+interface ContactProps {
+  onOpenResume?: () => void;
+}
+
+export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [copied, setCopied] = useState(false);
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -62,7 +67,7 @@ export const Contact: React.FC = () => {
           Get In Touch
         </h2>
         <p className="mx-auto max-w-xl text-xs text-zinc-400 sm:text-sm">
-          Seeking internships, direct project deployments, or general inquiries. Send an instant validation alert now.
+          Open to internships, freelance opportunities, and entry-level software roles.
         </p>
       </div>
 
@@ -73,12 +78,13 @@ export const Contact: React.FC = () => {
           <Card className="border-zinc-900 bg-zinc-950/20 p-6 text-left flex flex-col justify-between h-full">
             <div className="space-y-6">
               <div className="text-xs font-bold uppercase tracking-wider text-indigo-300">
-                ⚡ Direct Connections
+                ⚡ Direct Channels
               </div>
 
-              <div className="space-y-4">
-                <div className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-4">
-                  <span className="text-[10px] font-bold text-zinc-500 block uppercase mb-1">
+              <div className="space-y-3">
+                {/* Email */}
+                <div className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-3.5">
+                  <span className="text-[9px] font-bold text-zinc-500 block uppercase mb-1">
                     Email Address
                   </span>
                   <div className="flex items-center justify-between gap-2">
@@ -87,36 +93,78 @@ export const Contact: React.FC = () => {
                     </span>
                     <button
                       onClick={handleCopyEmail}
-                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-zinc-850 bg-zinc-900/60 text-zinc-400 transition-colors hover:text-white"
+                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-zinc-850 bg-zinc-900/60 text-zinc-400 transition-colors hover:text-white"
                       aria-label="Copy Email"
                     >
-                      {copied ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} />}
+                      {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
                     </button>
                   </div>
                 </div>
 
-                <div className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-4">
-                  <span className="text-[10px] font-bold text-zinc-500 block uppercase mb-1">
-                    Phone Contacts
-                  </span>
-                  <span className="font-mono text-xs font-semibold text-white block">
-                    {portfolioConstants.phone}
-                  </span>
-                </div>
+                {/* LinkedIn */}
+                <a
+                  href={portfolioConstants.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-3.5 flex items-center justify-between hover:border-zinc-800 transition-all group"
+                >
+                  <div>
+                    <span className="text-[9px] font-bold text-zinc-500 block uppercase mb-1">
+                      LinkedIn Profile
+                    </span>
+                    <span className="font-mono text-xs font-semibold text-white truncate group-hover:text-indigo-400 transition-colors">
+                      dixit-ankoliya
+                    </span>
+                  </div>
+                  <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-zinc-850 bg-zinc-900/60 text-zinc-400 group-hover:text-white">
+                    <Linkedin size={14} />
+                  </div>
+                </a>
 
-                <div className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-4">
-                  <span className="text-[10px] font-bold text-zinc-500 block uppercase mb-1">
-                    Operations Base
-                  </span>
-                  <span className="font-mono text-xs font-semibold text-white block">
-                    {portfolioConstants.location}
-                  </span>
-                </div>
+                {/* GitHub */}
+                <a
+                  href={`https://github.com/${portfolioConstants.github}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-3.5 flex items-center justify-between hover:border-zinc-800 transition-all group"
+                >
+                  <div>
+                    <span className="text-[9px] font-bold text-zinc-500 block uppercase mb-1">
+                      GitHub Profile
+                    </span>
+                    <span className="font-mono text-xs font-semibold text-white truncate group-hover:text-indigo-400 transition-colors">
+                      @{portfolioConstants.github}
+                    </span>
+                  </div>
+                  <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-zinc-850 bg-zinc-900/60 text-zinc-400 group-hover:text-white">
+                    <Github size={14} />
+                  </div>
+                </a>
+
+                {/* Resume Download */}
+                {onOpenResume && (
+                  <button
+                    onClick={onOpenResume}
+                    className="w-full rounded-xl border border-zinc-900 bg-zinc-950/40 p-3.5 flex items-center justify-between hover:border-zinc-800 transition-all group text-left"
+                  >
+                    <div>
+                      <span className="text-[9px] font-bold text-zinc-500 block uppercase mb-1">
+                        Resume Document
+                      </span>
+                      <span className="font-mono text-xs font-semibold text-white truncate group-hover:text-indigo-400 transition-colors">
+                        View &amp; Save CV
+                      </span>
+                    </div>
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-zinc-850 bg-zinc-900/60 text-zinc-400 group-hover:text-white">
+                      <FileText size={14} />
+                    </div>
+                  </button>
+                )}
               </div>
             </div>
 
-            <div className="mt-8 text-[10px] text-zinc-550 border-t border-zinc-900/60 pt-4 leading-normal">
-              * Messages submitted trigger browser notifications. Response timeframe is generally within 12 hours.
+            <div className="mt-6 text-[9px] text-zinc-550 border-t border-zinc-900/60 pt-4 leading-normal">
+              * Operations Base: {portfolioConstants.location} • {portfolioConstants.phone}
             </div>
           </Card>
         </div>

@@ -57,7 +57,7 @@ export default function Home() {
         
         <GithubSection />
         
-        <Contact />
+        <Contact onOpenResume={() => setResumeOpen(true)} />
       </main>
 
       {/* Branded Footer */}
