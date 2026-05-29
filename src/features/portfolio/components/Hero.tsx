@@ -65,13 +65,29 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
           {/* Headline */}
           <h1 className="bg-gradient-to-b from-white via-zinc-200 to-zinc-500 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-            Building AI-Powered Software That Solves Real Problems
+            Building AI-Powered Applications &amp; Scalable Web Products
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm leading-relaxed text-zinc-400 sm:text-base md:text-lg max-w-2xl">
-            Hi, I&apos;m <span className="font-bold text-white">DIXIT ANKOLIYA</span>. An AI Engineer & Full Stack Developer focused on building secure databases, orchestrating agentic workflows, and shipping production-grade digital products.
+            BSc IT (AI/ML) student building real-world software using AI integrations, Full Stack Development, cloud deployment, and production workflows.
           </p>
+
+          {/* Trust Badges */}
+          <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1 text-[10px] font-bold tracking-wider text-indigo-400 font-mono sm:text-xs">
+            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
+              ✓ Live Projects
+            </span>
+            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
+              ✓ AI Applications
+            </span>
+            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
+              ✓ Cloud Deployment
+            </span>
+            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
+              ✓ Production Workflow
+            </span>
+          </div>
 
           {/* Recruiter 8-Second Fast-Scanner Grid */}
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 pt-4 border-t border-zinc-900/60">
