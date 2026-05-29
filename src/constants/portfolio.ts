@@ -8,25 +8,25 @@ export const portfolioConstants = {
   phone: "+91-7573940320",
   github: "dikshitlearning-dpatel",
   linkedin: "https://linkedin.com/in/dixit-ankoliya",
-  tagline: "Building AI-Powered Web Applications & Scalable Digital Products",
+  tagline: "Building AI-Powered Applications & Scalable Web Products",
   
   about: {
-    story: "I am a BSc Information Technology (AI/ML) student at GLS University with a profound passion for software engineering, full-stack architectures, and AI-driven products. My entry into the developer space was sparked by a curiosity to make machines think and act intelligently, which quickly evolved into a love for building complete, user-centric web applications. Rather than focusing purely on theory, I learn by building—designing clean frontend interfaces, drafting robust backend APIs, orchestrating database models, and deploying production products. I am relentlessly curious, an agile learner, and I embrace modern AI development workflows to ship scalable code faster and more securely.",
+    story: "I am currently pursuing my BSc in Information Technology (AI/ML) at GLS University. While many developers focus purely on academic theory, I have spent the last two years building hands-on full-stack web applications and deploying them directly to production. I specialize in Next.js 15, TypeScript, Prisma ORM, and SQLite, and I integrate state-of-the-art LLM APIs (OpenAI & Claude) using structured output modes to deliver real business solutions. My goal is to work with ambitious engineering teams where I can bring my rapid building velocity, proactive problem-solving mindset, and rigorous work ethic.",
     bullets: [
       {
-        title: "Problem Solver",
-        description: "Focus on creating software that addresses real-world business and user pain points rather than just writing academic code."
+        title: "Practical Builder",
+        description: "I focus on creating software that addresses real-world user pain points and administrative overhead, deploying sandbox systems to cloud environments."
       },
       {
-        title: "AI-Native Builder",
-        description: "Proficient in orchestrating LLM APIs, building automated intelligence pipelines, and using AI tools to boost developer velocity."
+        title: "AI Integrations",
+        description: "Proficient in designing strict schema validations to bypass LLM hallucinations and using AI tooling workflows to double developer output speeds."
       },
       {
-        title: "Full-Stack Mindset",
-        description: "Comfortable spanning database queries, server route logic, secure user authentication, and high-performance user interfaces."
+        title: "Full-Stack Autonomy",
+        description: "Comfortable writing relational SQLite database models with Prisma ORM, configuring secure Next.js edge middlewares, and staging clean deployments."
       }
     ],
-    aspirations: "I am actively seeking software development, full-stack, or AI engineering internships and entry-level positions where I can bring my proactive builder mindset, rapid prototyping speed, and rigorous work ethic to a high-growth team."
+    aspirations: "I am actively seeking software engineering, full-stack development, or AI-developer internships and entry-level positions where I can bring immediate value and scale my skills."
   },
 
   skills: [
@@ -240,24 +240,24 @@ export const portfolioConstants = {
 
 export const whyHireMe: WhyHireItem[] = [
   {
-    title: "AI-Native Velocity",
-    description: "I integrate state-of-the-art LLM capabilities, structured output schemas, and automated text parsing. I build features at rapid pace using modern agentic systems.",
+    title: "Practical Intern Focus",
+    description: "I bypass generic academic toy codes and focus on staging production-ready relational schemas, secure auth cookies, and full request-response lifecycles.",
+    icon: "Target"
+  },
+  {
+    title: "AI-Native Prototyping",
+    description: "I implement strict JSON modes, OpenAI system prompt parameters, and token chunking filters, executing intelligent automated systems at rapid pace.",
     icon: "Cpu"
   },
   {
-    title: "Full-Stack Capability",
-    description: "From designing schema relations using Prisma ORM to executing secure HTTP-only cookie validation and deploying static assets, I manage the full request lifecycle.",
-    icon: "Layers"
-  },
-  {
-    title: "High-Caliber Focus",
-    description: "I spend my days architecting dashboard tools, profiling indexing queries, and testing screen viewports. I approach software engineering as an exact science.",
+    title: "High Agency & Velocity",
+    description: "I approach engineering as a continuous craft. I spend my days profiling index latencies, reading documentation, and writing zero-error static pipelines.",
     icon: "Zap"
   },
   {
-    title: "Product Mindset",
-    description: "I write clean code that drives business metrics. I structure products to load instantly, convert visitor trust, and offer premium interactive experiences.",
-    icon: "Target"
+    title: "Scalable Full-Stack Core",
+    description: "Equipped to handle SQL migrations, Next.js API server handlers, and Vercel edge telemetry maps without requiring continuous supervision.",
+    icon: "Layers"
   }
 ];
 
@@ -265,37 +265,37 @@ export const devProcess: DevStep[] = [
   {
     phase: "01",
     title: "Domain & UX Research",
-    description: "Map out client workflows, analyze common product deficits, outline strict requirement sets, and conceptualize visual visual flows.",
-    details: ["SaaS Landscape Auditing", "Pain Point Syntheses", "Feature Scope Specifying"]
+    description: "Audit existing SaaS systems, discover user paint points, establish rigid project scope, and construct initial wireframes.",
+    details: ["Administrative Friction Mapping", "Requirements Spec Drafting", "Feature Cost Benchmarking"]
   },
   {
     phase: "02",
-    title: "System Design & Schemas",
-    description: "Draft database model relationships, verify index keys, structure server route boundaries, and write secure authentication rules.",
-    details: ["Type-Safe Prisma Relational ERDs", "JWT Stateless Auth Layouts", "Next.js Middleware Routers"]
+    title: "Schema & Architecture design",
+    description: "Draft database entity relational diagrams (ERDs), map API routes, index keys, and design authentication middleware guidelines.",
+    details: ["Type-Safe Prisma Models", "Stateless Session Cookie Middleware", "REST Endpoint Telemetry Map"]
   },
   {
     phase: "03",
-    title: "Engineered Development",
-    description: "Create component structures using strict type safety, implement dynamic state controllers, and write modular API handlers.",
-    details: ["Next.js App Server Actions", "Performance-Focused Grids", "Reusable Design Tokens"]
+    title: "Engineered Building",
+    description: "Construct clean typescript models, modular layout sections using cards, and secure server actions.",
+    details: ["Next.js Server Actions", "Performance UI Frameworks", "Modular Code Segments"]
   },
   {
     phase: "04",
-    title: "AI Orchestration Layer",
-    description: "Chain system context prompts, configure model temperatures, and implement schema parsing to ensure 100% predictable client rendering.",
-    details: ["Structured JSON Mode Tuning", "Zero-Hallucination Schemas", "System Message Engineering"]
+    title: "AI Integration Pipelines",
+    description: "Configure OpenAI JSON mode guidelines, engineering temperature metrics, and build input safety filters.",
+    details: ["Structured AI Prompts", "Hallucination Resolving Checks", "Token Payload Optimization"]
   },
   {
     phase: "05",
-    title: "Rigorous QA Checklist",
-    description: "Verify TypeScript compliance, resolve ESLint feedback, check cross-device sizing grids, and audit performance metrics.",
-    details: ["Full Compile Checks", "Lighthouse Compliance Audits", "Multi-Viewport Fluidity Checks"]
+    title: "TypeScript & Spacing Audits",
+    description: "Verify typescript compilation parameters, solve lint warnings, and run cross-device spacing tests down to 320px.",
+    details: ["Strict Type Checking", "Zero-Warning Linter Compilations", "Viewport Scale Refinements"]
   },
   {
     phase: "06",
-    title: "Cloud & Production Deploy",
-    description: "Deploy production targets, configure sitemaps and sitemap headers, map custom DNS paths, and activate serverless telemetry.",
-    details: ["Vercel Staging Deployments", "SEO Meta & Schema Injections", "Edge Node Orchestration"]
+    title: "Staged Live Deployment",
+    description: "Configure robots crawl instructions, dynamic sitemap indexes, staging routes, and edge cache telemetry.",
+    details: ["Vercel Edge Cloud Deployment", "Google Schema Injection", "robots.txt & sitemap.xml Indexes"]
   }
 ];
