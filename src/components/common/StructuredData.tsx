@@ -1,0 +1,71 @@
+import React from "react";
+import { portfolioConstants } from "../../constants/portfolio";
+
+export const StructuredData: React.FC = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://dixit-ankoliya.vercel.app/#person",
+        "name": portfolioConstants.name,
+        "jobTitle": "AI Engineer & Full Stack Developer",
+        "url": "https://dixit-ankoliya.vercel.app",
+        "sameAs": [
+          portfolioConstants.linkedin,
+          `https://github.com/${portfolioConstants.github}`
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Self-Directed Practical Lab"
+        },
+        "description": portfolioConstants.about.story,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ahmedabad",
+          "addressRegion": "Gujarat",
+          "addressCountry": "India"
+        },
+        "knowsAbout": [
+          "AI Engineering",
+          "Full Stack Development",
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Python",
+          "Prisma ORM",
+          "SQLite",
+          "OpenAI API",
+          "AWS Cloud"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dixit-ankoliya.vercel.app/#website",
+        "url": "https://dixit-ankoliya.vercel.app",
+        "name": `${portfolioConstants.name} - Elite Developer Portfolio`,
+        "publisher": {
+          "@id": "https://dixit-ankoliya.vercel.app/#person"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://dixit-ankoliya.vercel.app/#profilepage",
+        "url": "https://dixit-ankoliya.vercel.app",
+        "name": `${portfolioConstants.name} - Personal Portfolio`,
+        "about": {
+          "@id": "https://dixit-ankoliya.vercel.app/#person"
+        }
+      }
+    ]
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+};
+
+export default StructuredData;
