@@ -67,7 +67,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
           Get In Touch
         </h2>
         <p className="mx-auto max-w-xl text-xs text-zinc-400 sm:text-sm">
-          Open to internships, freelance opportunities, and entry-level software engineering roles.
+          Open to internships, freelance work, and entry-level software engineering opportunities.
         </p>
       </div>
 
