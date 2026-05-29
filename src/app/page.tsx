@@ -4,10 +4,6 @@ import React, { useState } from "react";
 import Navbar from "../components/common/Navbar";
 import Hero from "../features/portfolio/components/Hero";
 import Stats from "../features/portfolio/components/Stats";
-import TechMarquee from "../features/portfolio/components/TechMarquee";
-import About from "../features/portfolio/components/About";
-import WhyHireMe from "../features/portfolio/components/WhyHireMe";
-import DevProcess from "../features/portfolio/components/DevProcess";
 import Skills from "../features/portfolio/components/Skills";
 import Projects from "../features/portfolio/components/Projects";
 import Experience from "../features/portfolio/components/Experience";
@@ -31,31 +27,23 @@ export default function Home() {
       {/* Frosted header rail */}
       <Navbar />
 
-      <main className="relative z-10 space-y-12">
+      <main className="relative z-10 space-y-16">
         {/* Core segments stacking */}
         <Hero onOpenResume={() => setResumeOpen(true)} />
         
         <Stats />
         
-        <TechMarquee />
-        
-        <About />
-        
-        <WhyHireMe />
-        
-        <DevProcess />
+        <Projects />
         
         <Skills />
         
-        <Projects />
+        <GithubSection />
         
         <Experience />
         
         <Certifications />
         
         <Education />
-        
-        <GithubSection />
         
         <Contact onOpenResume={() => setResumeOpen(true)} />
       </main>
