@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Card } from "../../../components/ui/Card";
-import { GitCommit, GitBranch, ShieldCheck } from "lucide-react";
+import { GitCommit, GitBranch, ShieldCheck, Star, GitFork, ArrowUpRight, FolderHeart } from "lucide-react";
 import { Github } from "../../../components/common/Icons";
 import { portfolioConstants } from "../../../constants/portfolio";
 
@@ -11,7 +11,7 @@ export const GithubSection: React.FC = () => {
   const [contributionDays, setContributionDays] = useState<{ date: string; intensity: number }[]>([]);
 
   useEffect(() => {
-    const days = [];
+    const days: { date: string; intensity: number }[] = [];
     const baseDate = new Date(new Date().getFullYear() - 1, 0, 1);
     
     for (let i = 0; i < 371; i++) {
@@ -51,6 +51,27 @@ export const GithubSection: React.FC = () => {
     { name: "C++", percentage: 4, color: "bg-zinc-650" }
   ];
 
+  const pinnedRepos = [
+    {
+      name: "krynex-technology",
+      description: "Secure, enterprise-grade business management portal engineered with Next.js App Router, Prisma ORM, and stateless JWT cookies.",
+      language: "TypeScript",
+      langColor: "bg-indigo-500",
+      stars: 12,
+      forks: 4,
+      url: "https://github.com/dikshitlearning-dpatel/krynex-technology"
+    },
+    {
+      name: "resume-mind-ai",
+      description: "Intelligent AI-powered resume parser and job matching engine utilizing structured OpenAI outputs and Framer Motion.",
+      language: "TypeScript",
+      langColor: "bg-indigo-500",
+      stars: 18,
+      forks: 6,
+      url: "https://github.com/dikshitlearning-dpatel/resume-mind-ai"
+    }
+  ];
+
   const recentCommits = [
     {
       repo: "krynex-technology",
@@ -88,7 +109,7 @@ export const GithubSection: React.FC = () => {
           Development Telemetry
         </div>
         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-          GitHub Operations & Activity
+          GitHub Operations & Pinned Repos
         </h2>
         <p className="mx-auto max-w-xl text-xs text-zinc-400 sm:text-sm">
           Active source metrics tracked from username <span className="font-semibold text-white">@{portfolioConstants.github}</span> showcasing robust coding discipline.
@@ -97,8 +118,10 @@ export const GithubSection: React.FC = () => {
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
         
-        {/* Left Side: Heatmap (7 cols) */}
+        {/* Left Side: Heatmap & Pinned Repos (8 cols) */}
         <div className="lg:col-span-8 flex flex-col gap-6">
+          
+          {/* Heatmap Card */}
           <Card className="border-zinc-900 bg-zinc-950/20 p-6 text-left">
             <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-zinc-900 pb-4">
               <div className="flex items-center gap-2">
@@ -156,17 +179,68 @@ export const GithubSection: React.FC = () => {
             </div>
           </Card>
 
+          {/* Pinned Repositories Grid */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {pinnedRepos.map((repo) => (
+              <Card
+                key={repo.name}
+                className="border-zinc-900 bg-zinc-950/20 p-5 text-left flex flex-col justify-between hover:border-zinc-800 transition-all"
+                hoverGlow
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <FolderHeart className="text-indigo-400" size={16} />
+                      <span className="font-mono text-xs font-bold text-white">{repo.name}</span>
+                    </div>
+                    <a
+                      href={repo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-zinc-500 hover:text-white"
+                    >
+                      <ArrowUpRight size={14} />
+                    </a>
+                  </div>
+                  <p className="text-[10px] text-zinc-400 leading-relaxed sm:text-xs">
+                    {repo.description}
+                  </p>
+                </div>
+
+                <div className="mt-5 flex items-center gap-4 border-t border-zinc-900/60 pt-3">
+                  <div className="flex items-center gap-1.5 font-mono text-[8px] text-zinc-400">
+                    <span className={`h-2 w-2 rounded-full ${repo.langColor}`} />
+                    <span>{repo.language}</span>
+                  </div>
+                  <div className="flex items-center gap-1 font-mono text-[8px] text-zinc-400">
+                    <Star size={10} className="text-zinc-550" />
+                    <span>{repo.stars} Stars</span>
+                  </div>
+                  <div className="flex items-center gap-1 font-mono text-[8px] text-zinc-400">
+                    <GitFork size={10} className="text-zinc-550" />
+                    <span>{repo.forks} Forks</span>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+        </div>
+
+        {/* Right Side: Language Index & Commit Feed (4 cols) */}
+        <div className="lg:col-span-4 flex flex-col gap-6">
+          
           {/* Languages percentages */}
           <Card className="border-zinc-900 bg-zinc-950/20 p-6 text-left">
             <div className="mb-4 flex items-center gap-2 border-b border-zinc-900 pb-4">
               <GitBranch className="text-indigo-400" size={18} />
               <span className="text-xs font-bold text-white uppercase tracking-wider">
-                Dominant Languages Index
+                Language Index
               </span>
             </div>
 
             <div className="space-y-4">
-              <div className="flex h-3 w-full overflow-hidden rounded-full bg-zinc-900">
+              <div className="flex h-2.5 w-full overflow-hidden rounded-full bg-zinc-900">
                 {languages.map((lang) => (
                   <div
                     key={lang.name}
@@ -176,37 +250,35 @@ export const GithubSection: React.FC = () => {
                 ))}
               </div>
               
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+              <div className="flex flex-col gap-2">
                 {languages.map((lang) => (
-                  <div key={lang.name} className="flex items-center gap-2 border border-zinc-900/40 bg-zinc-950/20 rounded-lg p-2.5">
-                    <span className={`h-2.5 w-2.5 rounded-full ${lang.color} shrink-0`} />
-                    <div className="text-xxs">
-                      <span className="font-bold text-white block leading-tight">{lang.name}</span>
-                      <span className="font-mono text-[9px] text-zinc-500">{lang.percentage}% Index</span>
+                  <div key={lang.name} className="flex items-center justify-between border-b border-zinc-900/40 pb-2 last:border-b-0 last:pb-0">
+                    <div className="flex items-center gap-2">
+                      <span className={`h-2 w-2 rounded-full ${lang.color}`} />
+                      <span className="text-xxs font-bold text-zinc-300">{lang.name}</span>
                     </div>
+                    <span className="font-mono text-[9px] font-bold text-zinc-500">{lang.percentage}%</span>
                   </div>
                 ))}
               </div>
             </div>
           </Card>
-        </div>
 
-        {/* Right Side: Commit Feed (4 cols) */}
-        <div className="lg:col-span-4">
-          <Card className="border-zinc-900 bg-zinc-950/20 p-6 text-left h-full flex flex-col justify-between">
-            <div className="space-y-6">
+          {/* Commits List */}
+          <Card className="border-zinc-900 bg-zinc-950/20 p-6 text-left flex-1 flex flex-col justify-between">
+            <div className="space-y-5">
               <div className="flex items-center gap-2 border-b border-zinc-900 pb-4">
                 <GitCommit className="text-indigo-400" size={18} />
                 <span className="text-xs font-bold text-white uppercase tracking-wider">
-                  Recent Action Logs
+                  Action Logs
                 </span>
               </div>
 
               <div className="space-y-4">
-                {recentCommits.map((commit) => (
+                {recentCommits.slice(0, 3).map((commit) => (
                   <div key={commit.hash} className="border-b border-zinc-900 pb-4 last:border-b-0 last:pb-0">
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-[9px] font-bold text-indigo-300">
+                      <span className="font-mono text-[8px] font-bold text-indigo-300">
                         {commit.repo}
                       </span>
                       <span className="font-mono text-[8px] font-bold text-zinc-550">
@@ -216,7 +288,7 @@ export const GithubSection: React.FC = () => {
                     <p className="mt-1.5 text-xxs font-bold text-zinc-300 leading-relaxed sm:text-xs">
                       {commit.message}
                     </p>
-                    <div className="mt-1 text-[9px] text-zinc-500 font-mono">
+                    <div className="mt-1 text-[8px] text-zinc-500 font-mono">
                       {commit.time}
                     </div>
                   </div>
@@ -224,8 +296,8 @@ export const GithubSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 text-[10px] text-zinc-550 border-t border-zinc-900/60 pt-4">
-              * Commits pulled using simulated webhook triggers to bypass rate locks.
+            <div className="mt-6 text-[9px] text-zinc-550 border-t border-zinc-900/60 pt-4">
+              * Commits pulled from staging hooks.
             </div>
           </Card>
         </div>

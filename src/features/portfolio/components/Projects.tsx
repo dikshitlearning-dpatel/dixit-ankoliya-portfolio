@@ -4,13 +4,27 @@ import React, { useState } from "react";
 import { Project } from "../../../types";
 import { Card } from "../../../components/ui/Card";
 import { CaseStudyModal } from "./CaseStudyModal";
-import { ArrowUpRight, FolderGit2, Info } from "lucide-react";
+import { ArrowUpRight, FolderGit2, Info, Timer, ShieldCheck, Zap } from "lucide-react";
 import { Github } from "../../../components/common/Icons";
 import { portfolioConstants } from "../../../constants/portfolio";
 import { AnimatePresence } from "framer-motion";
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const getProjectMetrics = (id: string) => {
+    if (id === "krynex") {
+      return [
+        { label: "Staged Uptime", value: "99.9%", icon: <ShieldCheck size={12} className="text-emerald-400" /> },
+        { label: "Edge Latency", value: "0ms Filter", icon: <Timer size={12} className="text-indigo-400" /> }
+      ];
+    } else {
+      return [
+        { label: "ATS Match Score", value: "85+ Target", icon: <Zap size={12} className="text-amber-400" /> },
+        { label: "LLM Processing", value: "1.2s Return", icon: <Timer size={12} className="text-pink-400" /> }
+      ];
+    }
+  };
 
   return (
     <section id="projects" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
@@ -52,6 +66,22 @@ export const Projects: React.FC = () => {
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-900 border border-zinc-850 shadow-inner">
                   <FolderGit2 className="text-indigo-400" size={20} />
                 </div>
+              </div>
+
+              {/* Glowing Performance Metrics Bar */}
+              <div className="flex items-center gap-3">
+                {getProjectMetrics(project.id).map((metric) => (
+                  <div
+                    key={metric.label}
+                    className="flex items-center gap-1.5 rounded-lg border border-zinc-900 bg-zinc-950/60 px-3 py-1.5 select-none"
+                  >
+                    {metric.icon}
+                    <div className="text-[9px]">
+                      <span className="text-zinc-500 block leading-none">{metric.label}</span>
+                      <span className="font-mono font-bold text-white block mt-0.5 leading-none">{metric.value}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
 
               {/* Description */}

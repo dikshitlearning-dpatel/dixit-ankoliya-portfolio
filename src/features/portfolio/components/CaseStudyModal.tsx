@@ -56,8 +56,8 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 border-b-2 px-6 py-4.5 font-mono text-[10px] font-bold uppercase transition-all duration-300 shrink-0 ${
                 activeTab === tab.id
-                  ? "border-indigo-500 bg-indigo-500/5 text-indigo-400"
-                  : "border-transparent text-zinc-400 hover:text-white"
+                  ? "border-b-indigo-500 bg-indigo-500/5 text-indigo-400"
+                  : "border-b-transparent text-zinc-400 hover:text-white"
               }`}
             >
               {tab.icon}
@@ -135,7 +135,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
           )}
 
           {activeTab === "system" && (
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-3">
                   🏗️ System Architecture & Data Flows
@@ -157,9 +157,49 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
                 </div>
               </div>
 
+              {/* Advanced Relational ERD & Code Schema Blocks */}
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-3">
+                  {project.id === "krynex" ? "🗃️ Prisma Database Relational Schemas" : "⚙️ Structured OpenAI Schema Payload"}
+                </h4>
+                <div className="rounded-xl border border-zinc-900 bg-zinc-950 p-5 font-mono text-[9px] text-zinc-400 leading-relaxed overflow-x-auto">
+                  {project.id === "krynex" ? (
+                    <pre>{`model User {
+  id        String    @id @default(uuid())
+  email     String    @unique
+  password  String    // JWT Hashed Auth
+  role      Role      @default(CLIENT)
+  projects  Project[]
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  title       String
+  client      User     @relation(fields: [clientId], references: [id])
+  clientId    String   @index
+  status      Status   @default(STAGED)
+}`}</pre>
+                  ) : (
+                    <pre>{`{
+  "name": "structured_ats_grader",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "atsScore": { "type": "number" },
+      "missingSkills": { "type": "array", "items": { "type": "string" } },
+      "actionPoints": { "type": "array", "items": { "type": "string" } }
+    },
+    "required": ["atsScore", "missingSkills", "actionPoints"]
+  }
+}`}</pre>
+                  )}
+                </div>
+              </div>
+
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
-                  🗃️ Technology Integrations
+                  🛡️ Tech Stack Orchestration
                 </h4>
                 <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {project.caseStudy.architecture.map((item) => (
