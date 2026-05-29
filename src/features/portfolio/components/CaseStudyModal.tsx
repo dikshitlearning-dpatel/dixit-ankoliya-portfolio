@@ -12,6 +12,7 @@ interface CaseStudyModalProps {
 
 export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose }) => {
   const [activeTab, setActiveTab] = useState<"overview" | "research" | "system" | "challenges" | "learnings">("overview");
+  const [activeFileTab, setActiveFileTab] = useState<"primary" | "secondary">("primary");
 
   const tabs = [
     { id: "overview", name: "Overview", icon: <Layers size={14} /> },
@@ -157,14 +158,41 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
                 </div>
               </div>
 
-              {/* Advanced Relational ERD & Code Schema Blocks */}
-              <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-3">
-                  {project.id === "krynex" ? "🗃️ Prisma Database Relational Schemas" : "⚙️ Structured OpenAI Schema Payload"}
-                </h4>
+              {/* Interactive Mock Code Editor */}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between border-b border-zinc-900 pb-3">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300">
+                    📂 Relational Schemas & Code telemetries
+                  </h4>
+                  {/* File tabs selector */}
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setActiveFileTab("primary")}
+                      className={`rounded px-2.5 py-1 font-mono text-[9px] font-bold uppercase transition-all ${
+                        activeFileTab === "primary"
+                          ? "bg-indigo-500/10 text-indigo-400 border border-indigo-500/20"
+                          : "bg-zinc-900/40 text-zinc-500 hover:text-white border border-zinc-850"
+                      }`}
+                    >
+                      {project.id === "krynex" ? "schema.prisma" : "openai_schema.json"}
+                    </button>
+                    <button
+                      onClick={() => setActiveFileTab("secondary")}
+                      className={`rounded px-2.5 py-1 font-mono text-[9px] font-bold uppercase transition-all ${
+                        activeFileTab === "secondary"
+                          ? "bg-indigo-500/10 text-indigo-400 border border-indigo-500/20"
+                          : "bg-zinc-900/40 text-zinc-500 hover:text-white border border-zinc-850"
+                      }`}
+                    >
+                      {project.id === "krynex" ? "middleware.ts" : "system_prompt.txt"}
+                    </button>
+                  </div>
+                </div>
+
                 <div className="rounded-xl border border-zinc-900 bg-zinc-950 p-5 font-mono text-[9px] text-zinc-400 leading-relaxed overflow-x-auto">
                   {project.id === "krynex" ? (
-                    <pre>{`model User {
+                    activeFileTab === "primary" ? (
+                      <pre>{`model User {
   id        String    @id @default(uuid())
   email     String    @unique
   password  String    // JWT Hashed Auth
@@ -179,8 +207,29 @@ model Project {
   clientId    String   @index
   status      Status   @default(STAGED)
 }`}</pre>
+                    ) : (
+                      <pre>{`import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import { jwtVerify } from "jose";
+
+export async function middleware(req: NextRequest) {
+  const token = req.cookies.get("token")?.value;
+  if (!token) return NextResponse.redirect(new URL("/login", req.url));
+
+  try {
+    const { payload } = await jwtVerify(token, new TextEncoder().encode(process.env.JWT_SECRET));
+    if (payload.role !== "ADMIN") {
+      return NextResponse.redirect(new URL("/unauthorized", req.url));
+    }
+    return NextResponse.next();
+  } catch {
+    return NextResponse.redirect(new URL("/login", req.url));
+  }
+}`}</pre>
+                    )
                   ) : (
-                    <pre>{`{
+                    activeFileTab === "primary" ? (
+                      <pre>{`{
   "name": "structured_ats_grader",
   "strict": true,
   "schema": {
@@ -193,6 +242,13 @@ model Project {
     "required": ["atsScore", "missingSkills", "actionPoints"]
   }
 }`}</pre>
+                    ) : (
+                      <pre>{`You are an expert ATS (Applicant Tracking System) Grader. 
+Read the Candidate's Resume and compare it against the Job Description.
+Grade the Match Score on a strict scale of 0-100.
+List missing technical skills conceptually.
+Return the output strictly in the requested JSON schema.`}</pre>
+                    )
                   )}
                 </div>
               </div>

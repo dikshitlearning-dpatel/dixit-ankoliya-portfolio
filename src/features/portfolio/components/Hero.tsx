@@ -35,9 +35,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
   return (
     <section className="relative flex min-h-[98vh] flex-col items-center justify-center overflow-hidden px-4 pt-32 pb-24 text-center sm:px-6">
       
-      {/* Decorative slowly morphing background gradient meshes */}
-      <div className="absolute top-1/4 left-1/2 -z-10 h-[380px] w-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/10 blur-[120px] sm:h-[600px] sm:w-[600px] animate-float-slow" />
-      <div className="absolute top-1/3 left-1/3 -z-10 h-[280px] w-[280px] rounded-full bg-purple-500/10 blur-[100px] animate-float-medium" />
+      {/* Apple-Grade morphing background mesh */}
+      <div className="absolute top-1/3 left-1/2 -z-10 h-[450px] w-[450px] bg-gradient-to-tr from-indigo-500/10 via-purple-500/10 to-transparent blur-[100px] sm:h-[650px] sm:w-[650px] animate-morph-glow" />
 
       {/* Grid Pattern overlay */}
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,rgba(128,128,128,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(128,128,128,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
