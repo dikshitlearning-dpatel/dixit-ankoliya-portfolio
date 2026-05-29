@@ -35,9 +35,9 @@ export default function Home() {
         
         <Projects />
         
-        <Skills />
-        
         <GithubSection />
+        
+        <Skills />
         
         <Experience />
         
