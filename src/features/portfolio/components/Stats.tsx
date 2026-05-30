@@ -19,8 +19,8 @@ export const Stats: React.FC = () => {
       icon: <Cpu className="text-purple-400" size={20} />
     },
     {
-      metric: "4+",
-      label: "Industry Credentials",
+      metric: "4",
+      label: "Certifications",
       description: "IBM and Google validated specializations",
       icon: <Award className="text-pink-400" size={20} />
     },

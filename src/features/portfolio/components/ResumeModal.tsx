@@ -31,10 +31,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ onClose }) => {
         {/* Header toolbar Controls */}
         <div className="flex flex-col gap-4 border-b border-zinc-900 bg-zinc-950 p-5 sm:flex-row sm:items-center sm:justify-between print:hidden">
           <div>
-            <span className="rounded bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 font-mono text-[8px] font-bold text-indigo-400 uppercase">
-              Verifiable CV Stamping
-            </span>
-            <h3 className="mt-1.5 text-base font-extrabold text-white">Digital Document Viewer</h3>
+            <h3 className="text-base font-extrabold text-white">Resume / CV</h3>
           </div>
 
           <div className="flex flex-wrap gap-2.5">
@@ -50,7 +47,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ onClose }) => {
               className="flex h-9 items-center justify-center gap-1.5 rounded-lg bg-indigo-600 px-3.5 text-xs font-bold text-white transition-all hover:opacity-90 hover:shadow-lg hover:shadow-indigo-500/20"
             >
               <Download size={14} />
-              GitHub CV Profile
+              GitHub Profile
             </button>
             <button
               onClick={onClose}
@@ -119,7 +116,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ onClose }) => {
                 {/* Practical Experiences */}
                 <div className="space-y-6">
                   <h4 className="border-b border-zinc-900 pb-1.5 font-mono text-xs font-bold uppercase tracking-wider text-indigo-400 print:text-indigo-600 print:border-zinc-200">
-                    Technical Staging Experience
+                    Project Experience
                   </h4>
                   {portfolioConstants.experience.map((exp) => (
                     <div key={exp.organization} className="space-y-2">
@@ -285,7 +282,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ onClose }) => {
 
         {/* Modal Footer (Screen View Only) */}
         <div className="border-t border-zinc-900 bg-zinc-950 p-5 text-center text-xxs text-zinc-550 print:hidden">
-          Dixit Ankoliya CV document • Electronically stamped credentials
+          Dixit Ankoliya — Portfolio Resume
         </div>
 
       </motion.div>

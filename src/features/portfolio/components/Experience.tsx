@@ -16,10 +16,10 @@ export const Experience: React.FC = () => {
           Practical Lab
         </div>
         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-          Staged Practical Experience
+          Self-Directed Project Experience
         </h2>
         <p className="mx-auto max-w-xl text-xs text-zinc-400 sm:text-sm">
-          Proven building capabilities backed by direct sandbox applications, API configurations, and cloud deployment pipelines.
+          Building real web applications, integrating APIs, and deploying to production as a self-taught full stack developer.
         </p>
       </div>
 
@@ -56,7 +56,7 @@ export const Experience: React.FC = () => {
               {/* Highlights List */}
               <div className="mt-6 space-y-4">
                 <div className="text-xs font-bold uppercase tracking-wider text-zinc-300">
-                  🎯 Key Contributions
+                  🎯 What I Built
                 </div>
                 <ul className="space-y-3">
                   {exp.highlights.map((highlight, idx) => (

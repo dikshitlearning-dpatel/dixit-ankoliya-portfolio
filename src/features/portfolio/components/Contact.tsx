@@ -5,7 +5,6 @@ import { Card } from "../../../components/ui/Card";
 import { Send, CheckCircle2, AlertCircle, Copy, Check, FileText } from "lucide-react";
 import { Github, Linkedin } from "../../../components/common/Icons";
 import { portfolioConstants } from "../../../constants/portfolio";
-import confetti from "canvas-confetti";
 
 interface ContactProps {
   onOpenResume?: () => void;
@@ -40,18 +39,14 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
     e.preventDefault();
     if (!validate()) return;
 
-    setStatus("sending");
-    
-    // Simulate API request
-    setTimeout(() => {
-      setStatus("success");
-      confetti({
-        particleCount: 150,
-        spread: 80,
-        origin: { y: 0.6 }
-      });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    }, 1200);
+    // Open mailto: link with form values pre-filled — honest approach with no backend
+    const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nFrom: ${formData.email}\n\n${formData.message}`
+    );
+    window.open(`mailto:${portfolioConstants.email}?subject=${subject}&body=${body}`, "_blank");
+    setStatus("success");
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
@@ -254,7 +249,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                   {status === "success" && (
                     <div className="flex items-center gap-1.5 text-xxs font-semibold text-emerald-400">
                       <CheckCircle2 size={14} />
-                      <span>Message received successfully!</span>
+                      <span>Your email client has been opened with the message pre-filled.</span>
                     </div>
                   )}
                   {status === "error" && (
@@ -270,7 +265,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                   disabled={status === "sending"}
                   className="flex h-11 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 px-5 text-xs font-bold text-white transition-all hover:opacity-90 hover:shadow-lg active:scale-95 disabled:opacity-50 shrink-0"
                 >
-                  {status === "sending" ? "Sending..." : "Send Message"}
+                  Send via Email
                   <Send size={12} />
                 </button>
               </div>

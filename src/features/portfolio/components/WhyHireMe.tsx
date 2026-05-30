@@ -33,7 +33,7 @@ export const WhyHireMe: React.FC = () => {
           Why I Bring Value to Your Team
         </h2>
         <p className="mx-auto max-w-xl text-xs text-zinc-400 sm:text-sm">
-          A proactive engineer designed to accelerate development cycles and ship clean systems autonomously.
+          A BSc IT student who builds real applications, learns by shipping code, and brings practical full stack skills to engineering teams.
         </p>
       </div>
 

@@ -16,10 +16,10 @@ export const Certifications: React.FC = () => {
           Industry Credentials
         </div>
         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-          Verifiable Certifications
+          Certifications
         </h2>
         <p className="mx-auto max-w-xl text-xs text-zinc-400 sm:text-sm">
-          Specializations in Machine Learning models, cognitive logic foundations, and cloud automation validated by leading institutions.
+          Completed specializations in Machine Learning, Python, AI fundamentals, and digital marketing from IBM and Google.
         </p>
       </div>
 

@@ -188,6 +188,10 @@ export const GithubSection: React.FC = () => {
                   </div>
                 ))}
               </div>
+
+              <p className="text-[8px] text-zinc-600 leading-normal pt-1 border-t border-zinc-900/40">
+                * Estimated breakdown based on project composition.
+              </p>
             </div>
           </Card>
         </div>

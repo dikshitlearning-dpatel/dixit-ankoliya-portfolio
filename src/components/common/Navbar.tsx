@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -48,13 +49,13 @@ export const Navbar: React.FC = () => {
 
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6">
           {/* Logo Monogram */}
-          <a
-            href="#"
+          <Link
+            href="/"
             className="group relative flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950/80 font-mono text-sm font-bold tracking-tight text-white transition-all duration-300 hover:border-indigo-500/50 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]"
           >
             <span className="relative z-10 transition-colors group-hover:text-indigo-400">DA</span>
             <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-1 rounded-full border border-zinc-800/80 bg-zinc-950/40 px-2 py-1 backdrop-blur-md md:flex">

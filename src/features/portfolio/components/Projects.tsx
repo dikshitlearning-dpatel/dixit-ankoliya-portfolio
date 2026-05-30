@@ -144,7 +144,7 @@ export const Projects: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 text-xxs font-bold uppercase tracking-wider text-white transition-colors hover:text-indigo-400 sm:text-xs"
                 >
-                  Staging Demo
+                  Live Demo
                   <ArrowUpRight size={14} />
                 </a>
               </div>

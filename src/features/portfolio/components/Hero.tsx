@@ -103,8 +103,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             </div>
             <div className="border border-zinc-900 bg-zinc-950/20 rounded-xl p-3 backdrop-blur-sm">
               <span className="text-[9px] font-bold text-zinc-500 block uppercase mb-1">PROOF</span>
-              <span className="text-[10px] font-extrabold text-white block">2+ Live Projects</span>
-              <span className="text-[9px] text-zinc-450 block leading-tight mt-0.5">IBM Certified</span>
+              <span className="text-[10px] font-extrabold text-white block">2 Live Projects</span>
+              <span className="text-[9px] text-zinc-450 block leading-tight mt-0.5">IBM &amp; Google Certs</span>
             </div>
             <div className="border border-zinc-900 bg-zinc-950/20 rounded-xl p-3 backdrop-blur-sm">
               <span className="text-[9px] font-bold text-zinc-500 block uppercase mb-1">STATUS</span>
@@ -130,7 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               className="flex h-12 items-center justify-center gap-2 rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 text-sm font-bold text-zinc-300 backdrop-blur-md transition-all duration-300 hover:border-zinc-700 hover:text-white active:scale-95"
             >
               <FileText size={16} />
-              Download Resume
+              View Resume
             </button>
 
             <a
@@ -168,7 +168,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             </div>
             <div className="space-y-1 text-left">
               <span className="font-mono text-[9px] font-bold text-indigo-400 uppercase tracking-widest block">
-                Engineering Specializer
+                Full Stack Developer
               </span>
               <h3 className="text-sm font-black text-white leading-snug">DIXIT ANKOLIYA</h3>
               <p className="text-[10px] text-zinc-500 leading-none">BSc Information Technology (AI/ML)</p>
@@ -221,7 +221,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
             <div className="text-[9px] text-zinc-600 border-t border-zinc-900/60 pt-3 flex justify-between">
               <span>GLS University FCAIT</span>
-              <span>100% Cloud Sandbox</span>
+              <span>Vercel Deployed</span>
             </div>
           </div>
 

@@ -338,7 +338,7 @@ Return the output strictly in the requested JSON schema.`}</pre>
         {/* Modal Footer */}
         <div className="flex flex-col gap-4 border-t border-zinc-900 bg-zinc-950 p-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="text-xxs text-zinc-550 sm:text-xs">
-            © Dixit Ankoliya • Staged Live Deployment Active
+            © Dixit Ankoliya
           </div>
           <div className="flex gap-3">
             <a
