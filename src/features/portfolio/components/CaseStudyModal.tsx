@@ -11,15 +11,15 @@ interface CaseStudyModalProps {
 }
 
 export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose }) => {
-  const [activeTab, setActiveTab] = useState<"overview" | "research" | "system" | "challenges" | "learnings">("overview");
+  const [activeTab, setActiveTab] = useState<"overview" | "features" | "system" | "challenges" | "learnings">("overview");
   const [activeFileTab, setActiveFileTab] = useState<"primary" | "secondary">("primary");
 
   const tabs = [
     { id: "overview", name: "Overview", icon: <Layers size={14} /> },
-    { id: "research", name: "Research & Strategy", icon: <HelpCircle size={14} /> },
+    { id: "features", name: "Key Features", icon: <HelpCircle size={14} /> },
     { id: "system", name: "System Design", icon: <HardDrive size={14} /> },
-    { id: "challenges", name: "Technical Obstacles", icon: <ShieldAlert size={14} /> },
-    { id: "learnings", name: "Key Takeaways", icon: <Cpu size={14} /> }
+    { id: "challenges", name: "Technical Challenges", icon: <ShieldAlert size={14} /> },
+    { id: "learnings", name: "Key Learnings", icon: <Cpu size={14} /> }
   ] as const;
 
   return (
@@ -102,35 +102,25 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
             </div>
           )}
 
-          {activeTab === "research" && (
+          {activeTab === "features" && (
             <div className="space-y-6">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-3">
-                  🔍 Target Domain Research & Product Auditing
+                  📋 Key Features Implemented
                 </h4>
-                <p className="text-xs text-zinc-400 sm:text-sm leading-relaxed">
-                  Before starting the implementation, I mapped out the key features required for a functional and secure application. I focused on setting up proper routes, validation, and layout structures.
+                <p className="text-xs text-zinc-400 sm:text-sm leading-relaxed mb-4">
+                  Here are the core functional components I built for this application:
                 </p>
-              </div>
-
-              <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-3">
-                  🚀 Intended Business Impact
-                </h4>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                  <div className="border-l-2 border-indigo-500 bg-indigo-500/5 p-4 rounded-r-lg">
-                    <div className="text-xs font-bold text-white">Security Integrity</div>
-                    <div className="mt-1 text-[10px] text-zinc-400">Stateless JWT session cookies ensure absolute security.</div>
-                  </div>
-                  <div className="border-l-2 border-purple-500 bg-purple-500/5 p-4 rounded-r-lg">
-                    <div className="text-xs font-bold text-white">Optimized Queries</div>
-                    <div className="mt-1 text-[10px] text-zinc-400">Selective database indexes remove multi-relational roundtrips.</div>
-                  </div>
-                  <div className="border-l-2 border-pink-500 bg-pink-500/5 p-4 rounded-r-lg">
-                    <div className="text-xs font-bold text-white">AI Grading Validity</div>
-                    <div className="mt-1 text-[10px] text-zinc-400">Strict schema mapping completely eliminates LLM hallucinations.</div>
-                  </div>
-                </div>
+                <ul className="space-y-3">
+                  {project.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5 rounded-xl border border-zinc-900 bg-zinc-950/40 p-4 text-xs text-zinc-400 sm:text-sm">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-indigo-500/10 font-mono text-[10px] text-indigo-400">
+                        {idx + 1}
+                      </span>
+                      <span className="leading-relaxed">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           )}

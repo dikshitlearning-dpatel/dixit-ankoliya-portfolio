@@ -2,13 +2,13 @@ import { Project, SkillCategory, Certification, Education, ExperienceItem, WhyHi
 
 export const portfolioConstants = {
   name: "DIXIT ANKOLIYA",
-  titles: ["Full Stack Developer", "AI Integrations", "AI-Focused Full Stack Developer"],
+  titles: ["Full Stack Developer (AI Integrations)", "Full Stack Developer", "AI-Focused Developer"],
   location: "Ahmedabad, Gujarat, India",
   email: "ankoliyadixit80@gmail.com",
   phone: "+91-7573940320",
   github: "dikshitlearning-dpatel",
   linkedin: "https://linkedin.com/in/dixit-ankoliya",
-  tagline: "Building AI-Powered Applications & Scalable Web Products",
+  tagline: "Building Practical Full Stack Applications with AI Integrations",
   
   about: {
     story: "I am currently pursuing my BSc in Information Technology (AI/ML) at GLS University. I have focused on building practical, full-stack web applications and deploying them live. I work with Next.js, TypeScript, Prisma ORM, and SQLite, and integrate AI APIs (OpenAI & Claude) to parse data and build useful tools. My goal is to join a collaborative engineering team where I can contribute to shipping code and continue growing my full-stack development skills.",
