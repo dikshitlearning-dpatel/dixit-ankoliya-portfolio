@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Project } from "../../../types";
 import { Card } from "../../../components/ui/Card";
 import { CaseStudyModal } from "./CaseStudyModal";
-import { ArrowUpRight, FolderGit2, Info, Timer, ShieldCheck, Zap } from "lucide-react";
+import { ArrowUpRight, FolderGit2, Info, ShieldCheck, Zap, Layers } from "lucide-react";
 import { Github } from "../../../components/common/Icons";
 import { portfolioConstants } from "../../../constants/portfolio";
 import { AnimatePresence } from "framer-motion";
@@ -15,13 +15,13 @@ export const Projects: React.FC = () => {
   const getProjectMetrics = (id: string) => {
     if (id === "krynex") {
       return [
-        { label: "Staged Uptime", value: "99.9%", icon: <ShieldCheck size={12} className="text-emerald-400" /> },
-        { label: "Edge Latency", value: "0ms Filter", icon: <Timer size={12} className="text-indigo-400" /> }
+        { label: "Authentication", value: "JWT Cookies", icon: <ShieldCheck size={12} className="text-indigo-400" /> },
+        { label: "Database", value: "SQLite / Prisma", icon: <Layers size={12} className="text-emerald-400" /> }
       ];
     } else {
       return [
-        { label: "ATS Match Score", value: "85+ Target", icon: <Zap size={12} className="text-amber-400" /> },
-        { label: "LLM Processing", value: "1.2s Return", icon: <Timer size={12} className="text-pink-400" /> }
+        { label: "AI Integration", value: "OpenAI API", icon: <Zap size={12} className="text-amber-400" /> },
+        { label: "Format Mode", value: "Structured JSON", icon: <Layers size={12} className="text-pink-400" /> }
       ];
     }
   };
@@ -33,13 +33,13 @@ export const Projects: React.FC = () => {
       <div className="mb-12 space-y-4 text-center">
         <div className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-indigo-400">
           <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
-          Featured Products
+          Featured Projects
         </div>
         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-          SaaS Case Studies
+          Projects &amp; Case Studies
         </h2>
         <p className="mx-auto max-w-xl text-xs text-zinc-400 sm:text-sm">
-          A collection of high-performance business networks and AI-powered systems engineered for strict production compliance.
+          A collection of web applications and AI tools built with Next.js, databases, and structured APIs.
         </p>
       </div>
 

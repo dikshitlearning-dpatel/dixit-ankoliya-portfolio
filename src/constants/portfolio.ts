@@ -11,22 +11,22 @@ export const portfolioConstants = {
   tagline: "Building AI-Powered Applications & Scalable Web Products",
   
   about: {
-    story: "I am currently pursuing my BSc in Information Technology (AI/ML) at GLS University. While many developers focus purely on academic theory, I have spent the last two years building hands-on full-stack web applications and deploying them directly to production. I specialize in Next.js 15, TypeScript, Prisma ORM, and SQLite, and I integrate state-of-the-art LLM APIs (OpenAI & Claude) using structured output modes to deliver real business solutions. My goal is to work with ambitious engineering teams where I can bring my rapid building velocity, proactive problem-solving mindset, and rigorous work ethic.",
+    story: "I am currently pursuing my BSc in Information Technology (AI/ML) at GLS University. I have focused on building practical, full-stack web applications and deploying them live. I work with Next.js, TypeScript, Prisma ORM, and SQLite, and integrate AI APIs (OpenAI & Claude) to parse data and build useful tools. My goal is to join a collaborative engineering team where I can contribute to shipping code and continue growing my full-stack development skills.",
     bullets: [
       {
         title: "Practical Builder",
-        description: "I focus on creating software that addresses real-world user pain points and administrative overhead, deploying sandbox systems to cloud environments."
+        description: "I build web applications that solve real tasks, focusing on functional frontends and clean backend logic."
       },
       {
-        title: "AI Integrations",
-        description: "Proficient in designing strict schema validations to bypass LLM hallucinations and using AI tooling workflows to double developer output speeds."
+        title: "AI API Integration",
+        description: "Experienced in setting up structured AI outputs, parsing prompt responses, and preventing model format errors."
       },
       {
-        title: "Full-Stack Autonomy",
-        description: "Comfortable writing relational SQLite database models with Prisma ORM, configuring secure Next.js edge middlewares, and staging clean deployments."
+        title: "Full-Stack Basics",
+        description: "Comfortable writing database models with Prisma ORM, managing user sessions, and deploying projects to Vercel."
       }
     ],
-    aspirations: "I am actively seeking software engineering, full-stack development, or AI-developer internships and entry-level positions where I can bring immediate value and scale my skills."
+    aspirations: "I am actively seeking software engineering, full-stack development, or AI-developer internships and entry-level positions where I can contribute to projects and expand my skills."
   },
 
   skills: [
@@ -181,26 +181,22 @@ export const portfolioConstants = {
     {
       title: "Machine Learning with Python",
       issuer: "IBM",
-      date: "2025",
-      credentialUrl: "https://www.coursera.org/verify/ibm-ml-python"
+      date: "2025"
     },
     {
       title: "Python for Data Science",
       issuer: "IBM",
-      date: "2024",
-      credentialUrl: "https://www.coursera.org/verify/ibm-python-ds"
+      date: "2024"
     },
     {
       title: "Artificial Intelligence Fundamentals",
       issuer: "IBM",
-      date: "2024",
-      credentialUrl: "https://www.coursera.org/verify/ibm-ai-fundamentals"
+      date: "2024"
     },
     {
       title: "Google Digital Marketing & E-Commerce",
       issuer: "Google (via Coursera)",
-      date: "2024",
-      credentialUrl: "https://www.coursera.org/verify/google-marketing-ecommerce"
+      date: "2024"
     }
   ] as Certification[],
 
@@ -228,23 +224,23 @@ export const portfolioConstants = {
 
 export const whyHireMe: WhyHireItem[] = [
   {
-    title: "Practical Intern Focus",
-    description: "I bypass generic academic toy codes and focus on staging production-ready relational schemas, secure auth cookies, and full request-response lifecycles.",
+    title: "Practical Full Stack Skills",
+    description: "Experienced with Next.js, React, Node.js, and SQL databases. Focused on building clean backend APIs and responsive user interfaces.",
     icon: "Target"
   },
   {
-    title: "AI-Native Prototyping",
-    description: "I implement strict JSON modes, OpenAI system prompt parameters, and token chunking filters, executing intelligent automated systems at rapid pace.",
+    title: "AI API Integration",
+    description: "Implemented structured responses and parsed data with OpenAI APIs. Experienced in handling prompt parameters and formatting inputs.",
     icon: "Cpu"
   },
   {
-    title: "High Agency & Velocity",
-    description: "I approach engineering as a continuous craft. I spend my days profiling index latencies, reading documentation, and writing zero-error static pipelines.",
+    title: "Hands-on Development",
+    description: "Committed to clean code practices, writing type-safe TypeScript interfaces, and building projects that resolve user challenges.",
     icon: "Zap"
   },
   {
-    title: "Scalable Full-Stack Core",
-    description: "Equipped to handle SQL migrations, Next.js API server handlers, and Vercel edge telemetry maps without requiring continuous supervision.",
+    title: "Database Management",
+    description: "Experienced with Prisma ORM and SQLite, including schema migration, writing relational queries, and managing basic data flows.",
     icon: "Layers"
   }
 ];
@@ -252,38 +248,38 @@ export const whyHireMe: WhyHireItem[] = [
 export const devProcess: DevStep[] = [
   {
     phase: "01",
-    title: "Domain & UX Research",
-    description: "Audit existing SaaS systems, discover user paint points, establish rigid project scope, and construct initial wireframes.",
-    details: ["Administrative Friction Mapping", "Requirements Spec Drafting", "Feature Cost Benchmarking"]
+    title: "Project Planning",
+    description: "Define requirements, scope project features, and outline simple user flows.",
+    details: ["Feature Definition", "Wireframing User Paths", "Technology Selection"]
   },
   {
     phase: "02",
-    title: "Schema & Architecture design",
-    description: "Draft database entity relational diagrams (ERDs), map API routes, index keys, and design authentication middleware guidelines.",
-    details: ["Type-Safe Prisma Models", "Stateless Session Cookie Middleware", "REST Endpoint Telemetry Map"]
+    title: "Database & API Design",
+    description: "Design relational database tables and map out REST API endpoints.",
+    details: ["Type-Safe Prisma Schemas", "Relational Mapping", "API Route Routing"]
   },
   {
     phase: "03",
-    title: "Engineered Building",
-    description: "Construct clean typescript models, modular layout sections using cards, and secure server actions.",
-    details: ["Next.js Server Actions", "Performance UI Frameworks", "Modular Code Segments"]
+    title: "Full Stack Development",
+    description: "Develop responsive frontend screens and implement clean backend handlers.",
+    details: ["Next.js Server Actions", "TypeScript Data Models", "Modular Components"]
   },
   {
     phase: "04",
-    title: "AI Integration Pipelines",
-    description: "Configure OpenAI JSON mode guidelines, engineering temperature metrics, and build input safety filters.",
-    details: ["Structured AI Prompts", "Hallucination Resolving Checks", "Token Payload Optimization"]
+    title: "AI API Integration",
+    description: "Connect to AI models, set up system prompts, and validate data outputs.",
+    details: ["Prompt Engineering", "JSON Schema Validation", "Input Text Parsing"]
   },
   {
     phase: "05",
-    title: "TypeScript & Spacing Audits",
-    description: "Verify typescript compilation parameters, solve lint warnings, and run cross-device spacing tests down to 320px.",
-    details: ["Strict Type Checking", "Zero-Warning Linter Compilations", "Viewport Scale Refinements"]
+    title: "Testing & Bug Fixing",
+    description: "Run TypeScript checks, resolve linter warnings, and test across viewports.",
+    details: ["Strict Linter Checking", "Lighthouse Performance", "Viewport Adjustments"]
   },
   {
     phase: "06",
-    title: "Staged Live Deployment",
-    description: "Configure robots crawl instructions, dynamic sitemap indexes, staging routes, and edge cache telemetry.",
-    details: ["Vercel Edge Cloud Deployment", "Google Schema Injection", "robots.txt & sitemap.xml Indexes"]
+    title: "Deployment",
+    description: "Deploy the codebase to Vercel and check dynamic search index configurations.",
+    details: ["Vercel Hosting", "robots.txt Setup", "Sitemap Generation"]
   }
 ];

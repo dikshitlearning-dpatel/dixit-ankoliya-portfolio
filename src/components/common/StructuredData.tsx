@@ -7,10 +7,10 @@ export const StructuredData: React.FC = () => {
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://dixit-ankoliya.vercel.app/#person",
+        "@id": "https://dixit-ankoliya-portfolio.vercel.app/#person",
         "name": portfolioConstants.name,
         "jobTitle": "Full Stack Developer | AI Integrations",
-        "url": "https://dixit-ankoliya.vercel.app",
+        "url": "https://dixit-ankoliya-portfolio.vercel.app",
         "sameAs": [
           portfolioConstants.linkedin,
           `https://github.com/${portfolioConstants.github}`
@@ -41,20 +41,20 @@ export const StructuredData: React.FC = () => {
       },
       {
         "@type": "WebSite",
-        "@id": "https://dixit-ankoliya.vercel.app/#website",
-        "url": "https://dixit-ankoliya.vercel.app",
-        "name": `${portfolioConstants.name} - Elite Developer Portfolio`,
+        "@id": "https://dixit-ankoliya-portfolio.vercel.app/#website",
+        "url": "https://dixit-ankoliya-portfolio.vercel.app",
+        "name": `${portfolioConstants.name} - Portfolio`,
         "publisher": {
-          "@id": "https://dixit-ankoliya.vercel.app/#person"
+          "@id": "https://dixit-ankoliya-portfolio.vercel.app/#person"
         }
       },
       {
         "@type": "ProfilePage",
-        "@id": "https://dixit-ankoliya.vercel.app/#profilepage",
-        "url": "https://dixit-ankoliya.vercel.app",
+        "@id": "https://dixit-ankoliya-portfolio.vercel.app/#profilepage",
+        "url": "https://dixit-ankoliya-portfolio.vercel.app",
         "name": `${portfolioConstants.name} - Personal Portfolio`,
         "about": {
-          "@id": "https://dixit-ankoliya.vercel.app/#person"
+          "@id": "https://dixit-ankoliya-portfolio.vercel.app/#person"
         }
       }
     ]

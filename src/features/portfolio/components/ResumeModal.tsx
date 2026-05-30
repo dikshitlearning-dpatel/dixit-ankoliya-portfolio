@@ -95,7 +95,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ onClose }) => {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Globe size={12} className="text-zinc-650 shrink-0" />
-                  dixit-ankoliya.vercel.app
+                  dixit-ankoliya-portfolio.vercel.app
                 </span>
               </div>
             </div>

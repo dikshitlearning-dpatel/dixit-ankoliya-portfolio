@@ -25,7 +25,7 @@ export const About: React.FC = () => {
             About Me
           </div>
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-            My Journey as a Digital Architect
+            My Journey as a Developer
           </h2>
           <p className="text-sm leading-relaxed text-zinc-400 sm:text-base">
             {portfolioConstants.about.story}

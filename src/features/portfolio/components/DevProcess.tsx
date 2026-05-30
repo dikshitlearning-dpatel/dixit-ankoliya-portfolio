@@ -21,7 +21,7 @@ export const DevProcess: React.FC = () => {
           The 6-Step Development Process
         </h2>
         <p className="mx-auto max-w-xl text-xs text-zinc-400 sm:text-sm">
-          A disciplined execution lifecycle centered on thorough architecture, safety safeguards, and lightning speeds.
+          A structured lifecycle focused on clean architecture, thorough testing, and successful deployment.
         </p>
       </div>
 
@@ -105,7 +105,7 @@ export const DevProcess: React.FC = () => {
             </div>
 
             <div className="mt-8 text-[10px] text-zinc-550 italic border-t border-zinc-900/60 pt-4">
-              * Phase aligns exactly with FAANG and high-growth VC-backed startup deployment metrics.
+              * Development steps structured to ensure reliable features and maintainable code.
             </div>
           </Card>
         </div>

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dixit Ankoliya | Full Stack Developer | AI Integrations",
   description:
-    "GLS University BSc Information Technology (AI/ML) student building AI-powered web applications & scalable digital products. Specialized in Next.js 15, Prisma ORM, and LLM integrations.",
+    "BSc IT (AI/ML) student building real-world web applications using Next.js, TypeScript, Prisma, SQL, and AI integrations. Focused on creating scalable software and gaining practical engineering experience.",
   keywords: [
     "DIXIT ANKOLIYA",
     "AI Developer Ahmedabad",
@@ -30,12 +30,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Dixit Ankoliya" }],
   openGraph: {
     title: "Dixit Ankoliya | Full Stack Developer | AI Integrations",
-    description: "Building AI-Powered Web Applications & Scalable Digital Products",
-    url: "https://dixit-ankoliya.vercel.app",
+    description: "Building Full Stack Applications with AI Integrations",
+    url: "https://dixit-ankoliya-portfolio.vercel.app",
     siteName: "Dixit Ankoliya Portfolio",
     images: [
       {
-        url: "https://dixit-ankoliya.vercel.app/og-image.png",
+        url: "https://dixit-ankoliya-portfolio.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Dixit Ankoliya | Full Stack Developer | AI Integrations"
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dixit Ankoliya | Full Stack Developer | AI Integrations",
-    description: "Building AI-Powered Web Applications & Scalable Digital Products",
-    images: ["https://dixit-ankoliya.vercel.app/og-image.png"]
+    description: "Building Full Stack Applications with AI Integrations",
+    images: ["https://dixit-ankoliya-portfolio.vercel.app/og-image.png"]
   },
   robots: {
     index: true,

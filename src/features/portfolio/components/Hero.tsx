@@ -74,8 +74,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           </p>
 
           {/* Trust Line */}
-          <div className="flex items-center gap-2 border-l-2 border-indigo-500/30 pl-3 py-0.5 font-mono text-[10px] font-bold tracking-wider text-indigo-400 uppercase sm:text-xs">
-            2+ Live Projects • Full Stack Development • AI Integrations • Cloud Deployment
+          <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1 text-[10px] font-bold tracking-wider text-indigo-400 font-mono sm:text-xs uppercase">
+            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
+              ✓ 2+ Live Projects
+            </span>
+            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
+              ✓ Full Stack Development
+            </span>
+            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
+              ✓ AI Integrations
+            </span>
+            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
+              ✓ Cloud Deployment
+            </span>
           </div>
 
           {/* Recruiter 8-Second Fast-Scanner Grid */}
@@ -83,16 +94,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             <div className="border border-zinc-900 bg-zinc-950/20 rounded-xl p-3 backdrop-blur-sm">
               <span className="text-[9px] font-bold text-zinc-500 block uppercase mb-1">WHO</span>
               <span className="text-[10px] font-extrabold text-white block">Dixit Ankoliya</span>
-              <span className="text-[9px] text-zinc-450 block leading-tight mt-0.5">AI & Full Stack</span>
+              <span className="text-[9px] text-zinc-450 block leading-tight mt-0.5">Full Stack Dev</span>
             </div>
             <div className="border border-zinc-900 bg-zinc-950/20 rounded-xl p-3 backdrop-blur-sm">
               <span className="text-[9px] font-bold text-zinc-500 block uppercase mb-1">WHAT</span>
-              <span className="text-[10px] font-extrabold text-white block">AI Web SaaS</span>
-              <span className="text-[9px] text-zinc-450 block leading-tight mt-0.5">Secure Databases</span>
+              <span className="text-[10px] font-extrabold text-white block">Web Applications</span>
+              <span className="text-[9px] text-zinc-450 block leading-tight mt-0.5">Prisma ORM &amp; SQL</span>
             </div>
             <div className="border border-zinc-900 bg-zinc-950/20 rounded-xl p-3 backdrop-blur-sm">
               <span className="text-[9px] font-bold text-zinc-500 block uppercase mb-1">PROOF</span>
-              <span className="text-[10px] font-extrabold text-white block">2+ Staged Apps</span>
+              <span className="text-[10px] font-extrabold text-white block">2+ Live Projects</span>
               <span className="text-[9px] text-zinc-450 block leading-tight mt-0.5">IBM Certified</span>
             </div>
             <div className="border border-zinc-900 bg-zinc-950/20 rounded-xl p-3 backdrop-blur-sm">

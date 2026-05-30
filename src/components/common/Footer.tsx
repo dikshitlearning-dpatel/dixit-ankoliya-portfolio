@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="mt-8 flex flex-col items-center justify-between border-t border-zinc-900/80 pt-8 text-center text-[10px] text-zinc-650 md:flex-row">
-          <p>© {new Date().getFullYear()} Dixit Ankoliya. Crafted with elite precision using Next.js & TailwindCSS v4.</p>
+          <p>© {new Date().getFullYear()} Dixit Ankoliya. Built using Next.js & Tailwind CSS.</p>
           <p className="mt-2 md:mt-0">Open-source under MIT license.</p>
         </div>
       </div>

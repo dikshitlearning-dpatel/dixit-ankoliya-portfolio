@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Card } from "../../../components/ui/Card";
-import { GitCommit, GitBranch, ShieldCheck, Star, GitFork, ArrowUpRight, FolderHeart } from "lucide-react";
+import { GitCommit, GitBranch, ShieldCheck, ArrowUpRight, FolderHeart } from "lucide-react";
 import { Github } from "../../../components/common/Icons";
 import { portfolioConstants } from "../../../constants/portfolio";
 
@@ -54,20 +54,16 @@ export const GithubSection: React.FC = () => {
   const pinnedRepos = [
     {
       name: "krynex-technology",
-      description: "Secure, enterprise-grade business management portal engineered with Next.js App Router, Prisma ORM, and stateless JWT cookies.",
+      description: "A full-stack business website built to manage business information, secure access, and improve client interactions through a responsive web platform.",
       language: "TypeScript",
       langColor: "bg-indigo-500",
-      stars: 12,
-      forks: 4,
       url: "https://github.com/dikshitlearning-dpatel/krynex-technology"
     },
     {
       name: "resume-mind-ai",
-      description: "Intelligent AI-powered resume parser and job matching engine utilizing structured OpenAI outputs and Framer Motion.",
+      description: "An AI-powered resume analysis tool that compares resumes with job descriptions and provides structured feedback.",
       language: "TypeScript",
       langColor: "bg-indigo-500",
-      stars: 18,
-      forks: 6,
       url: "https://github.com/dikshitlearning-dpatel/resume-mind-ai"
     }
   ];
@@ -75,25 +71,25 @@ export const GithubSection: React.FC = () => {
   const recentCommits = [
     {
       repo: "krynex-technology",
-      message: "sec: deploy stateless JWT server cookie decryption middleware",
+      message: "feat: implement login page and JWT session authentication",
       time: "2 hours ago",
       hash: "82a1f0c"
     },
     {
       repo: "resume-mind-ai",
-      message: "prompt: validate structured system schema models to eliminate LLM hallucinations",
+      message: "feat: add OpenAI API integration for resume parsing",
       time: "1 day ago",
       hash: "fa4b8e2"
     },
     {
       repo: "krynex-technology",
-      message: "db: build selective Prisma ORM indexes for relational sqlite latency optimizations",
+      message: "fix: optimize SQLite schema queries with Prisma ORM",
       time: "3 days ago",
       hash: "d9e801c"
     },
     {
       repo: "resume-mind-ai",
-      message: "perf: strip non-standard formatting in client file parsers before backend chunks",
+      message: "feat: handle text parsing and formatting in frontend forms",
       time: "5 days ago",
       hash: "6c4b2a1"
     }
@@ -112,7 +108,7 @@ export const GithubSection: React.FC = () => {
           GitHub Operations & Pinned Repos
         </h2>
         <p className="mx-auto max-w-xl text-xs text-zinc-400 sm:text-sm">
-          Active source metrics tracked from username <span className="font-semibold text-white">@{portfolioConstants.github}</span> showcasing robust coding discipline.
+          GitHub repository activity and contributions for project components.
         </p>
       </div>
 
@@ -211,14 +207,6 @@ export const GithubSection: React.FC = () => {
                   <div className="flex items-center gap-1.5 font-mono text-[8px] text-zinc-400">
                     <span className={`h-2 w-2 rounded-full ${repo.langColor}`} />
                     <span>{repo.language}</span>
-                  </div>
-                  <div className="flex items-center gap-1 font-mono text-[8px] text-zinc-400">
-                    <Star size={10} className="text-zinc-550" />
-                    <span>{repo.stars} Stars</span>
-                  </div>
-                  <div className="flex items-center gap-1 font-mono text-[8px] text-zinc-400">
-                    <GitFork size={10} className="text-zinc-550" />
-                    <span>{repo.forks} Forks</span>
                   </div>
                 </div>
               </Card>

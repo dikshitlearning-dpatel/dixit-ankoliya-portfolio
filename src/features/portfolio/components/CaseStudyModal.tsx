@@ -73,7 +73,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
             <div className="space-y-6">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
-                  📌 Business Context
+                  📌 Project Overview
                 </h4>
                 <p className="text-xs text-zinc-400 sm:text-sm leading-relaxed">
                   {project.caseStudy.overview}
@@ -109,7 +109,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
                   🔍 Target Domain Research & Product Auditing
                 </h4>
                 <p className="text-xs text-zinc-400 sm:text-sm leading-relaxed">
-                  Before writing lines of code, I performed complete strategy audits mapping out standard developer mistakes. Freshers often build simple mock dashboards that lack JWT auth validation or crash under dynamic parameters.
+                  Before starting the implementation, I mapped out the key features required for a functional and secure application. I focused on setting up proper routes, validation, and layout structures.
                 </p>
               </div>
 
@@ -273,10 +273,10 @@ Return the output strictly in the requested JSON schema.`}</pre>
             <div className="space-y-6">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-3">
-                  ⚠️ Advanced Engineering Resolutions
+                  ⚠️ Technical Challenges Resolved
                 </h4>
                 <p className="text-xs text-zinc-400 sm:text-sm leading-relaxed mb-4">
-                  Building complex applications generates severe architectural issues. Here is how I solved core engineering blocks during execution:
+                  During development, I resolved several technical challenges related to data routing, session validation, and layout performance:
                 </p>
               </div>
 
@@ -302,10 +302,10 @@ Return the output strictly in the requested JSON schema.`}</pre>
             <div className="space-y-6">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-3">
-                  🎓 Core Architectural Takeaways
+                  🎓 Key Takeaways
                 </h4>
                 <p className="text-xs text-zinc-400 sm:text-sm leading-relaxed mb-4">
-                  Every product deployed increases my code quality and structures my workflows:
+                  Building and deploying these projects helped me strengthen my understanding of full stack concepts and workflow practices:
                 </p>
               </div>
 

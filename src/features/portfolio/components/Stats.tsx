@@ -8,8 +8,8 @@ export const Stats: React.FC = () => {
   const statsList = [
     {
       metric: "2+",
-      label: "Production-Grade Apps",
-      description: "Deployed business platforms & active AI systems",
+      label: "Completed Live Projects",
+      description: "Deployed web applications and AI APIs",
       icon: <Terminal className="text-indigo-400" size={20} />
     },
     {
@@ -25,9 +25,9 @@ export const Stats: React.FC = () => {
       icon: <Award className="text-pink-400" size={20} />
     },
     {
-      metric: "100%",
-      label: "Cloud Deployment",
-      description: "Static and serverless hosting infrastructures",
+      metric: "Live",
+      label: "Cloud Deployed",
+      description: "Hosted on Vercel with active domains",
       icon: <Cloud className="text-emerald-400" size={20} />
     }
   ];
