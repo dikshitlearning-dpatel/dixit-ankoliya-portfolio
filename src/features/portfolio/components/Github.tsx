@@ -4,7 +4,6 @@ import React from "react";
 import { Card } from "../../../components/ui/Card";
 import { GitBranch, ArrowUpRight, FolderHeart, ShieldCheck } from "lucide-react";
 import { Github } from "../../../components/common/Icons";
-import { portfolioConstants } from "../../../constants/portfolio";
 
 export const GithubSection: React.FC = () => {
   const languages = [
@@ -47,10 +46,11 @@ export const GithubSection: React.FC = () => {
   ];
 
   const currentFocus = [
-    { title: "Gemini API Parsers", desc: "Refining JSON output schema validations inside Resume Mind AI to eliminate format exceptions." },
-    { title: "SQLite Connection Pools", desc: "Caching Prisma Client singletons inside Krynex Technology to prevent serverless SQLite database locks." },
-    { title: "Algorithms & Databases", desc: "Practicing data structures on LeetCode and studying SQL relational indexes." },
-    { title: "Next.js Rendering Paths", desc: "Studying App Router request caching mechanisms and Edge middleware execution limits." }
+    "Improving Resume Mind AI",
+    "Building Krynex Technology",
+    "Learning scalable backend systems",
+    "Practicing DSA & SQL",
+    "Exploring Next.js architecture"
   ];
 
   return (
@@ -136,22 +136,20 @@ export const GithubSection: React.FC = () => {
             <div className="mb-4 flex items-center gap-2 border-b border-zinc-900 pb-4">
               <ShieldCheck className="text-emerald-400" size={18} />
               <span className="text-xs font-bold text-white uppercase tracking-wider">
-                Current Activity
+                Current Focus
               </span>
             </div>
 
             <div className="space-y-4">
               <span className="text-[9px] font-bold text-zinc-500 font-mono block uppercase">
-                Active Learning & Builds
+                Active Goals
               </span>
               <div className="space-y-4 font-mono text-[10px] text-zinc-400">
                 {currentFocus.map((focus, idx) => (
-                  <div key={idx} className="border-b border-zinc-900 pb-3 last:border-b-0 last:pb-0">
-                    <span className="text-white font-bold block mb-1 text-[10px] sm:text-xs">
-                      ✓ {focus.title}
-                    </span>
-                    <span className="text-[9px] text-zinc-500 leading-normal block">
-                      {focus.desc}
+                  <div key={idx} className="border-b border-zinc-900 pb-3 last:border-b-0 last:pb-0 flex items-center gap-2">
+                    <span className="text-emerald-400 font-bold text-xs">✓</span>
+                    <span className="text-white font-bold text-[10px] sm:text-xs">
+                      {focus}
                     </span>
                   </div>
                 ))}

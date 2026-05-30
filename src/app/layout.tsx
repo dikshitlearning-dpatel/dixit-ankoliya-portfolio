@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dixit-ankoliya-portfolio.vercel.app"),
   title: "Dixit Ankoliya | Full Stack Developer (AI Integrations)",
   description:
     "BSc IT (AI/ML) student building real-world web applications using Next.js, TypeScript, Prisma, SQL, and AI integrations. Focused on creating scalable software and gaining practical engineering experience.",
@@ -28,6 +29,9 @@ export const metadata: Metadata = {
     "Resume Mind AI"
   ],
   authors: [{ name: "Dixit Ankoliya" }],
+  alternates: {
+    canonical: "https://dixit-ankoliya-portfolio.vercel.app",
+  },
   openGraph: {
     title: "Dixit Ankoliya | Full Stack Developer (AI Integrations)",
     description: "Building Full Stack Applications with AI Integrations",
@@ -35,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Dixit Ankoliya Portfolio",
     images: [
       {
-        url: "https://dixit-ankoliya-portfolio.vercel.app/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Dixit Ankoliya | Full Stack Developer (AI Integrations)"
@@ -48,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dixit Ankoliya | Full Stack Developer (AI Integrations)",
     description: "Building Full Stack Applications with AI Integrations",
-    images: ["https://dixit-ankoliya-portfolio.vercel.app/og-image.png"]
+    images: ["/og-image.png"]
   },
   robots: {
     index: true,
