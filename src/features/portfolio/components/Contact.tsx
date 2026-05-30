@@ -113,7 +113,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                       LinkedIn Profile
                     </span>
                     <span className="font-mono text-xs font-semibold text-white truncate group-hover:text-indigo-400 transition-colors">
-                      dixit-ankoliya
+                      dixit-ankoliya-527ba0360
                     </span>
                   </div>
                   <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-zinc-850 bg-zinc-900/60 text-zinc-400 group-hover:text-white">
@@ -133,7 +133,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                       GitHub Profile
                     </span>
                     <span className="font-mono text-xs font-semibold text-white truncate group-hover:text-indigo-400 transition-colors">
-                      dixit-ankoliya
+                      dikshitlearning-dpatel
                     </span>
                   </div>
                   <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-zinc-850 bg-zinc-900/60 text-zinc-400 group-hover:text-white">

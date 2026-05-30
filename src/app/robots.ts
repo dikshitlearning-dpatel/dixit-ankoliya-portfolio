@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://dixit-ankoliya.vercel.app/sitemap.xml",
+    sitemap: "https://dixit-ankoliya-portfolio.vercel.app/sitemap.xml",
   };
 }

@@ -7,7 +7,7 @@ export const portfolioConstants = {
   email: "ankoliyadixit80@gmail.com",
   phone: "+91-7573940320",
   github: "dikshitlearning-dpatel",
-  linkedin: "https://linkedin.com/in/dixit-ankoliya",
+  linkedin: "https://www.linkedin.com/in/dixit-ankoliya-527ba0360/",
   tagline: "Building Practical Full Stack Applications with AI Integrations",
   
   about: {
@@ -105,7 +105,7 @@ export const portfolioConstants = {
         "Contact and email workflows"
       ],
       githubUrl: "https://github.com/dikshitlearning-dpatel/krynex-technology",
-      liveUrl: "https://krynex-tech.vercel.app",
+      liveUrl: "https://krynex-technology.vercel.app",
       featured: true,
       caseStudy: {
         overview: "Krynex Technology is a full-stack business website built to manage business information, secure access, and improve client interactions through a responsive web platform.",
@@ -145,7 +145,7 @@ export const portfolioConstants = {
         "Responsive interface and live deployment"
       ],
       githubUrl: "https://github.com/dikshitlearning-dpatel/resume-mind-ai",
-      liveUrl: "https://resumemind-ai.vercel.app",
+      liveUrl: "https://ai-resume-analyzer-puce-rho.vercel.app",
       featured: true,
       caseStudy: {
         overview: "Resume Mind AI is an AI-powered resume analysis tool that compares resumes with job descriptions and provides structured feedback.",

@@ -65,12 +65,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
           {/* Headline */}
           <h1 className="bg-gradient-to-b from-white via-zinc-200 to-zinc-500 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-            Full Stack Developer Building Real-World Applications with AI Integrations
+            Full Stack Developer Building Practical Web Applications with AI Integrations
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm leading-relaxed text-zinc-400 sm:text-base md:text-lg max-w-2xl">
-            BSc IT (AI/ML) student building practical web applications using Next.js, TypeScript, Prisma ORM, SQL, authentication systems, and AI APIs. Focused on solving real-world problems through hands-on development and deployment.
+            BSc IT (AI/ML) student building real-world applications using Next.js, TypeScript, Prisma ORM, SQL, authentication systems, and AI APIs. Focused on practical software development through hands-on projects and deployment.
           </p>
 
           {/* Trust Line */}
@@ -116,7 +116,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href="#projects"
               className="group flex h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-6 text-sm font-bold text-white transition-all duration-300 hover:opacity-95 hover:shadow-lg hover:shadow-indigo-500/20 active:scale-95"
@@ -139,7 +139,21 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             >
               Contact Me
             </a>
+
+            <a
+              href={portfolioConstants.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-12 items-center justify-center gap-2 rounded-xl border border-zinc-850 bg-zinc-900/10 px-6 text-sm font-bold text-zinc-400 transition-all duration-300 hover:border-zinc-800 hover:text-white active:scale-95"
+            >
+              <Linkedin size={16} className="text-indigo-400" />
+              LinkedIn Profile
+            </a>
           </div>
+
+          <p className="text-xxs text-zinc-500 font-mono mt-1">
+            * Open to internships, freelance work, and entry-level software opportunities.
+          </p>
 
         </div>
 
