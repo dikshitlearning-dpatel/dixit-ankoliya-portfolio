@@ -9,7 +9,7 @@ export const StructuredData: React.FC = () => {
         "@type": "Person",
         "@id": "https://dixit-ankoliya.vercel.app/#person",
         "name": portfolioConstants.name,
-        "jobTitle": "AI Engineer & Full Stack Developer",
+        "jobTitle": "Full Stack Developer | AI Integrations",
         "url": "https://dixit-ankoliya.vercel.app",
         "sameAs": [
           portfolioConstants.linkedin,
@@ -27,7 +27,7 @@ export const StructuredData: React.FC = () => {
           "addressCountry": "India"
         },
         "knowsAbout": [
-          "AI Engineering",
+          "AI Integrations",
           "Full Stack Development",
           "Next.js",
           "React",

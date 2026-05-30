@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dixit Ankoliya | AI Engineer & Full Stack Developer",
+  title: "Dixit Ankoliya | Full Stack Developer | AI Integrations",
   description:
     "GLS University BSc Information Technology (AI/ML) student building AI-powered web applications & scalable digital products. Specialized in Next.js 15, Prisma ORM, and LLM integrations.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Dixit Ankoliya" }],
   openGraph: {
-    title: "Dixit Ankoliya | AI Engineer & Full Stack Developer",
+    title: "Dixit Ankoliya | Full Stack Developer | AI Integrations",
     description: "Building AI-Powered Web Applications & Scalable Digital Products",
     url: "https://dixit-ankoliya.vercel.app",
     siteName: "Dixit Ankoliya Portfolio",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: "https://dixit-ankoliya.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Dixit Ankoliya | AI Engineer & Full Stack Developer"
+        alt: "Dixit Ankoliya | Full Stack Developer | AI Integrations"
       }
     ],
     locale: "en_US",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dixit Ankoliya | AI Engineer & Full Stack Developer",
+    title: "Dixit Ankoliya | Full Stack Developer | AI Integrations",
     description: "Building AI-Powered Web Applications & Scalable Digital Products",
     images: ["https://dixit-ankoliya.vercel.app/og-image.png"]
   },

@@ -2,7 +2,7 @@ import { Project, SkillCategory, Certification, Education, ExperienceItem, WhyHi
 
 export const portfolioConstants = {
   name: "DIXIT ANKOLIYA",
-  titles: ["AI Engineer", "Full Stack Developer", "Software Developer"],
+  titles: ["Full Stack Developer", "AI Integrations", "AI-Focused Full Stack Developer"],
   location: "Ahmedabad, Gujarat, India",
   email: "ankoliyadixit80@gmail.com",
   phone: "+91-7573940320",
@@ -95,37 +95,34 @@ export const portfolioConstants = {
       id: "krynex",
       title: "Krynex Technology",
       type: "Full Stack Business Platform",
-      description: "A secure, enterprise-grade business management portal engineered to streamline operations, manage client data, track projects, and offer robust administrative tools with role-based access control.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma ORM", "SQLite", "JWT Auth", "AWS EC2", "Vercel"],
+      description: "A full-stack business website built to manage business information, secure access, and improve client interactions through a responsive web platform.",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma ORM", "SQLite", "JWT Authentication", "Vercel"],
       features: [
-        "Advanced Admin Dashboard with system stats and telemetry graphs",
-        "Secure JSON Web Token (JWT) cookie-based authentication",
-        "Protected routing logic and middleware-level user permission validation",
-        "Complete User Management CRUD suite (create, read, update, delete)",
-        "Premium glassmorphic dashboard design optimized for heavy data workloads",
-        "Fully responsive, mobile-first design deployed on high-availability cloud servers"
+        "Authentication system with protected routes",
+        "Admin dashboard for internal management",
+        "Responsive frontend using Next.js and Tailwind CSS",
+        "Database integration using Prisma ORM and SQLite",
+        "Contact and email workflows"
       ],
       githubUrl: "https://github.com/dikshitlearning-dpatel/krynex-technology",
       liveUrl: "https://krynex-tech.vercel.app",
       featured: true,
       caseStudy: {
-        overview: "Krynex Technology is a sophisticated business platform designed to centralize administration, project tracking, and client management. Created to serve as a high-performance business hub, it integrates deep architectural patterns, secure backend routes, and structured database orchestration.",
-        problem: "Modern SaaS platforms require high security, fast loading times, and a unified interface for system admins and clients. Creating a custom dashboard that remains fully responsive while executing heavy database queries and maintaining secure user sessions can easily bottleneck fresher-built applications.",
-        solution: "I implemented a Next.js App Router project leveraging Prisma ORM to connect to a highly-optimized SQLite instance. JWT cookies were utilized for stateless, secure session validation, accompanied by a custom Next.js middleware that filters incoming requests before they hit server-side pages, preventing unauthorized access.",
+        overview: "Krynex Technology is a full-stack business website built to manage business information, secure access, and improve client interactions through a responsive web platform.",
+        problem: "Businesses require secure client portals and responsive dashboards to manage internal operations without introducing latency or authentication bypass vulnerabilities.",
+        solution: "Implemented a Next.js platform using Prisma ORM and SQLite, featuring JWT authentication for secure route protection, an admin dashboard, and automated email contact workflows.",
         architecture: [
-          "Frontend: Next.js App Router components with local React state and Tailwind styling.",
-          "Backend: Next.js Server Actions and Route Handlers for transactional operations.",
-          "Database: Prisma ORM acts as the type-safe link mapping data schemas to an optimized local SQLite structure.",
-          "Hosting: Deployed on Vercel with server operations running under cloud edge instances, and connected to AWS services."
+          "Frontend: Next.js App Router with Tailwind CSS for layout styling.",
+          "Backend: Next.js Route Handlers and Server Actions for email and dashboard operations.",
+          "Database: Prisma ORM for structured SQLite query mapping.",
+          "Hosting: Vercel for high-availability frontend and API endpoints."
         ],
         challenges: [
-          "Securing sub-routes from manual URL typing: Solved by writing custom middleware that decrypts JWTs and verifies the user's role on the edge layer.",
-          "Optimizing multi-relational queries in Prisma: Solved by creating efficient indexes and utilizing eager loading selectively to prevent N+1 database roundtrips."
+          "Protecting admin routes: Solved by executing middleware checks on incoming JWT auth tokens.",
+          "Streamlining operations: Configured clean server actions to process contact requests and email pipelines."
         ],
         learnings: [
-          "Deepened understanding of HTTP-only cookies, CORS policies, and server-side authentication practices.",
-          "Mastered the configuration of Next.js middleware and dynamic route segments.",
-          "Gained extensive experience deploying and testing applications under simulated production workloads on AWS."
+          "Improved understanding of authentication, database management, responsive UI, and deployment workflows."
         ]
       }
     },
@@ -133,36 +130,32 @@ export const portfolioConstants = {
       id: "resumemind",
       title: "Resume Mind AI",
       type: "AI Resume Analyzer & Matcher",
-      description: "An intelligent, high-converting AI-powered application designed to analyze resumes, compare them against active job descriptions, calculate match scores, and provide hyper-specific feedback to beat ATS filters.",
-      tech: ["AI APIs", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+      description: "An AI-powered resume analysis tool that compares resumes with job descriptions and provides structured feedback.",
+      tech: ["Next.js", "TypeScript", "AI APIs", "Tailwind CSS", "Vercel"],
       features: [
-        "Instant resume parsing and structured information extraction",
-        "Intelligent text-matching engine mapping resume skills to job descriptions",
-        "Accurate ATS-style Match Score calculations",
-        "AI-generated bullet-point suggestions, missing keyword alerts, and layout reviews",
-        "Fully interactive visual scoring gauge and download-friendly assessment reports",
-        "Premium glassmorphic card interface featuring smooth canvas animations"
+        "Resume and job description comparison",
+        "Match score generation",
+        "AI-powered improvement suggestions",
+        "Responsive interface and live deployment"
       ],
       githubUrl: "https://github.com/dikshitlearning-dpatel/resume-mind-ai",
       liveUrl: "https://resumemind-ai.vercel.app",
       featured: true,
       caseStudy: {
-        overview: "Resume Mind AI is an advanced AI utility targeted at bridging the gap between job seekers and Applicant Tracking Systems (ATS). It processes text, parses resumes, and performs deep contextual evaluation using state-of-the-art LLM prompts.",
-        problem: "Over 75% of resumes are filtered out by ATS before a human recruiter even reviews them. Standard resume tools only search for exact keyword matches, failing to understand conceptual synonyms or evaluate real skill relevance, which frustrates applicants.",
-        solution: "I developed a highly responsive, glassmorphic Next.js interface that leverages OpenAI's structured JSON output mode to run detailed comparisons. By designing a specialized system prompt, the AI reads both files, performs semantic analysis, generates an objective matching percentage, and lists exactly what the user needs to add or rephrase to pass filters.",
+        overview: "Resume Mind AI is an AI-powered resume analysis tool that compares resumes with job descriptions and provides structured feedback.",
+        problem: "Job seekers struggle to understand how resumes compare against Applicant Tracking Systems (ATS) and job requirements, leading to high rejection rates before interviews.",
+        solution: "Developed a Next.js application that integrates LLM APIs to perform conceptual matching, generate match scores, and provide structured feedback to candidates.",
         architecture: [
-          "Core Engine: Next.js API Routes routing authenticated payloads to AI endpoints.",
-          "AI Orchestration: Chained system prompting designed to produce rigid JSON models ensuring predictable frontend renders.",
-          "Animations: Framer Motion provides fluid, continuous feedback states while the AI analyses datasets (loading skeletons, pulse meters)."
+          "Frontend: Next.js with Tailwind CSS and Framer Motion animations.",
+          "AI Processing: Direct API integration with structured prompt schemas.",
+          "Hosting: Vercel deployment for serverless performance."
         ],
         challenges: [
-          "Preventing LLM hallucinations during grading: Overcome by implementing strict schema validation on the client-side and validating returned JSON keys against an interface.",
-          "Handling large text inputs in API payloads: Resolved by stripping non-standard characters and chunking input data before passing it to LLM endpoints."
+          "Structured feedback validation: Solved by requesting JSON outputs from the LLM and matching them against frontend models.",
+          "Performance mapping: Streamlined data payload size to bypass serverless function timeout constraints."
         ],
         learnings: [
-          "Gained expertise in prompt engineering, model temperature tuning, and structured JSON parsing.",
-          "Understood the constraints and best practices of serverless API timeouts on platforms like Vercel.",
-          "Developed rich animations in Framer Motion to make long AI processing intervals feel pleasant and lightning-fast."
+          "Learned how to integrate AI APIs, structure responses, and build user-focused tools."
         ]
       }
     }

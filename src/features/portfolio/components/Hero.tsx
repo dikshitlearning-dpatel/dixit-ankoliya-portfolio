@@ -13,7 +13,7 @@ interface HeroProps {
 const CONSOLE_SCRIPT = [
   "$ dixit-cli --init",
   "🚀 Personal system loaded successfully.",
-  "Specializations: [AI Pipelines, Full Stack REST]",
+  "Specializations: [Full Stack Dev, AI Integrations]",
   "Staged SaaS: [Krynex, ResumeMind]",
   "Status: Pulse active for Roles & Internships"
 ];
@@ -65,28 +65,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
           {/* Headline */}
           <h1 className="bg-gradient-to-b from-white via-zinc-200 to-zinc-500 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-            AI Engineer &amp; Full Stack Developer Building Production-Ready Applications
+            Building Full Stack Applications with AI Integrations
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm leading-relaxed text-zinc-400 sm:text-base md:text-lg max-w-2xl">
-            BSc IT (AI/ML) student building real-world software using AI integrations, Full Stack Development, and cloud deployment.
+            BSc IT (AI/ML) student building real-world web applications using Next.js, TypeScript, Prisma, SQL, and AI integrations. Focused on creating scalable software and gaining practical engineering experience through live projects.
           </p>
 
-          {/* Trust Badges */}
-          <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1 text-[10px] font-bold tracking-wider text-indigo-400 font-mono sm:text-xs">
-            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
-              ✓ Available for internships
-            </span>
-            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
-              ✓ Live deployed projects
-            </span>
-            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
-              ✓ AI-powered applications
-            </span>
-            <span className="flex items-center gap-1 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10">
-              ✓ Production workflows
-            </span>
+          {/* Trust Line */}
+          <div className="flex items-center gap-2 border-l-2 border-indigo-500/30 pl-3 py-0.5 font-mono text-[10px] font-bold tracking-wider text-indigo-400 uppercase sm:text-xs">
+            2+ Live Projects • Full Stack Development • AI Integrations • Cloud Deployment
           </div>
 
           {/* Recruiter 8-Second Fast-Scanner Grid */}
