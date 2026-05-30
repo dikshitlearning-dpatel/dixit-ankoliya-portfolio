@@ -80,10 +80,19 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
                 </p>
               </div>
 
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+                  💡 Motivation (Why I Built It)
+                </h4>
+                <p className="text-xs text-zinc-400 sm:text-sm leading-relaxed">
+                  {project.caseStudy.motivation}
+                </p>
+              </div>
+
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-5">
                   <div className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-2">
-                    🛑 Core Pain Points
+                    🛑 Problem Solved
                   </div>
                   <p className="text-xs text-zinc-400 leading-relaxed">
                     {project.caseStudy.problem}
@@ -92,7 +101,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
 
                 <div className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-5">
                   <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
-                    ✅ Structured Resolution
+                    ✅ Solution &amp; Implementation
                   </div>
                   <p className="text-xs text-zinc-400 leading-relaxed">
                     {project.caseStudy.solution}
@@ -243,18 +252,29 @@ Return the output strictly in the requested JSON schema.`}</pre>
                 </div>
               </div>
 
-              <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
-                  🛡️ Tech Stack Orchestration
-                </h4>
-                <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                  {project.caseStudy.architecture.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-xxs text-zinc-400 sm:text-xs">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <div className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-5">
+                  <div className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-2">
+                    🛠️ Technologies Used
+                  </div>
+                  <ul className="grid grid-cols-2 gap-1.5 font-mono text-[9px] text-zinc-400">
+                    {project.caseStudy.technologies.map((t) => (
+                      <li key={t} className="flex items-center gap-1.5">
+                        <span className="h-1 w-1 rounded-full bg-indigo-400" />
+                        {t}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="rounded-xl border border-zinc-900 bg-zinc-950/40 p-5">
+                  <div className="text-xs font-bold uppercase tracking-wider text-purple-400 mb-2">
+                    🚀 Deployment &amp; Hosting
+                  </div>
+                  <p className="text-[10px] text-zinc-400 leading-relaxed sm:text-xs">
+                    {project.caseStudy.deployment}
+                  </p>
+                </div>
               </div>
             </div>
           )}

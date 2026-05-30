@@ -109,6 +109,7 @@ export const portfolioConstants = {
       featured: true,
       caseStudy: {
         overview: "Krynex Technology is a full-stack business website built to manage business information, secure access, and improve client interactions through a responsive web platform.",
+        motivation: "I built this project to solve real administration bottlenecks for small business workflows, creating a unified workspace for client tracking and message handling.",
         problem: "Businesses require secure client portals and responsive dashboards to manage internal operations without introducing latency or authentication bypass vulnerabilities.",
         solution: "Implemented a Next.js platform using Prisma ORM and SQLite, featuring JWT authentication for secure route protection, an admin dashboard, and automated email contact workflows.",
         architecture: [
@@ -117,12 +118,17 @@ export const portfolioConstants = {
           "Database: Prisma ORM for structured SQLite query mapping.",
           "Hosting: Vercel for high-availability frontend and API endpoints."
         ],
+        technologies: ["Next.js", "React", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS", "Vercel"],
         challenges: [
           "Protecting admin routes: Solved by executing middleware checks on incoming JWT auth tokens.",
           "Streamlining operations: Configured clean server actions to process contact requests and email pipelines."
         ],
+        deployment: "Hosted live on Vercel with server actions and route handlers deployed under edge serverless instances. Environment credentials and secret salts are verified using secure Vercel environment variables.",
         learnings: [
-          "Improved understanding of authentication, database management, responsive UI, and deployment workflows."
+          "Improved understanding of authentication with protected routes and cookie validation.",
+          "Database management with Prisma ORM and SQLite schema migrations.",
+          "Responsive UI creation with Next.js and Tailwind CSS templates.",
+          "Deployment workflows utilizing Vercel and staged environments."
         ]
       }
     },
@@ -143,6 +149,7 @@ export const portfolioConstants = {
       featured: true,
       caseStudy: {
         overview: "Resume Mind AI is an AI-powered resume analysis tool that compares resumes with job descriptions and provides structured feedback.",
+        motivation: "I built this application to help job seekers optimize their resumes for Applicant Tracking Systems (ATS) and job postings conceptual requirements.",
         problem: "Job seekers struggle to understand how resumes compare against Applicant Tracking Systems (ATS) and job requirements, leading to high rejection rates before interviews.",
         solution: "Developed a Next.js application that integrates LLM APIs to perform conceptual matching, generate match scores, and provide structured feedback to candidates.",
         architecture: [
@@ -150,12 +157,16 @@ export const portfolioConstants = {
           "AI Processing: Direct API integration with structured prompt schemas.",
           "Hosting: Vercel deployment for serverless performance."
         ],
+        technologies: ["Next.js", "React", "TypeScript", "OpenAI API", "Tailwind CSS", "Framer Motion", "Vercel"],
         challenges: [
           "Structured feedback validation: Solved by requesting JSON outputs from the LLM and matching them against frontend models.",
           "Performance mapping: Streamlined data payload size to bypass serverless function timeout constraints."
         ],
+        deployment: "Hosted live on Vercel. Set up edge route handlers to manage connection handshakes and payload sizes safely under serverless function timeouts.",
         learnings: [
-          "Learned how to integrate AI APIs, structure responses, and build user-focused tools."
+          "Learned how to integrate AI APIs, structure responses, and build user-focused tools.",
+          "Understood the details of serverless route timeouts and input size optimization.",
+          "Gained experience using Framer Motion to build smooth, interactive user workflows."
         ]
       }
     }
@@ -163,17 +174,17 @@ export const portfolioConstants = {
 
   experience: [
     {
-      role: "Practical AI & Full Stack Builder (Independent Lab)",
-      organization: "Self-Directed Practical Experience",
+      role: "Full Stack Developer (Self-Directed)",
+      organization: "Practical Project Lab",
       duration: "2024 - Present",
       highlights: [
-        "Engineered, tested, and deployed multiple live production web applications using Next.js, React, Node.js, and Prisma ORM.",
-        "Integrated public APIs (OpenAI, Claude) to build custom automated text-processing and matching workflows.",
-        "Set up local staging databases and deployed live digital products onto AWS EC2 instances, managing configurations via AWS Cloud9.",
-        "Maintained structured, Git-versioned code repositories and pushed continuous integration pipelines to Vercel.",
-        "Automated mock database seeding, set up JWT-based security layers, and created responsive layouts matching top startup aesthetics."
+        "Developed and deployed functional web applications using Next.js, React, Node.js, and Prisma ORM.",
+        "Integrated OpenAI/Gemini APIs to add text analysis features and structured data parsing to projects.",
+        "Created relational SQLite schemas, managed database migrations, and built cookie-based JWT authentication routes.",
+        "Managed source code using Git and set up automated preview and production deployment workflows on Vercel.",
+        "Wrote type-safe interfaces in TypeScript to reduce runtime exceptions and build reliable features."
       ],
-      tech: ["Next.js", "React", "TypeScript", "Node.js", "SQLite", "Prisma", "AWS EC2", "Vercel", "Git"]
+      tech: ["Next.js", "React", "TypeScript", "Node.js", "SQLite", "Prisma ORM", "Vercel", "Git"]
     }
   ] as ExperienceItem[],
 

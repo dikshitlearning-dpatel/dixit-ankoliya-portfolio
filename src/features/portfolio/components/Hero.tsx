@@ -65,12 +65,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
           {/* Headline */}
           <h1 className="bg-gradient-to-b from-white via-zinc-200 to-zinc-500 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-            Building Practical Full Stack Applications with AI Integrations
+            Full Stack Developer Building Real-World Applications with AI Integrations
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm leading-relaxed text-zinc-400 sm:text-base md:text-lg max-w-2xl">
-            BSc IT (AI/ML) student building real-world applications using Next.js, TypeScript, Prisma, SQL, and AI APIs. Focused on solving practical problems through hands-on development and live deployments.
+            BSc IT (AI/ML) student building practical web applications using Next.js, TypeScript, Prisma ORM, SQL, authentication systems, and AI APIs. Focused on solving real-world problems through hands-on development and deployment.
           </p>
 
           {/* Trust Line */}

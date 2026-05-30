@@ -1,9 +1,12 @@
 export interface CaseStudy {
   overview: string;
+  motivation: string;
   problem: string;
   solution: string;
   architecture: string[];
+  technologies: string[];
   challenges: string[];
+  deployment: string;
   learnings: string[];
 }
 
