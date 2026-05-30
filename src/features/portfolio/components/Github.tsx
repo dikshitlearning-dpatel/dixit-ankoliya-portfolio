@@ -61,7 +61,7 @@ export const GithubSection: React.FC = () => {
     },
     {
       name: "resume-mind-ai",
-      description: "An AI-powered resume analysis tool that compares resumes with job descriptions and provides structured feedback.",
+      description: "AI-powered Resume Analyzer SaaS built with Next.js, TypeScript, and AI APIs to analyze resumes, calculate ATS scores, optimize job matching, generate smart resume improvements, and provide recruiter-level insights.",
       language: "TypeScript",
       langColor: "bg-indigo-500",
       url: "https://github.com/dikshitlearning-dpatel/resume-mind-ai"

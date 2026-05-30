@@ -136,7 +136,7 @@ export const portfolioConstants = {
       id: "resumemind",
       title: "Resume Mind AI",
       type: "AI Resume Analyzer & Matcher",
-      description: "An AI-powered resume analysis tool that compares resumes with job descriptions and provides structured feedback.",
+      description: "AI-powered Resume Analyzer SaaS built with Next.js, TypeScript, and AI APIs to analyze resumes, calculate ATS scores, optimize job matching, generate smart resume improvements, and provide recruiter-level insights.",
       tech: ["Next.js", "TypeScript", "AI APIs", "Tailwind CSS", "Vercel"],
       features: [
         "Resume and job description comparison",
