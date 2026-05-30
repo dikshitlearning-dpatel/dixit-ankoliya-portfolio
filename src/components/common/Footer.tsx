@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
               {portfolioConstants.name}
             </div>
             <p className="text-center text-xs text-zinc-500 md:text-left">
-              Full Stack Developer | AI Integrations • {portfolioConstants.location}
+              Full Stack Developer (AI Integrations) • {portfolioConstants.location}
             </p>
           </div>
 

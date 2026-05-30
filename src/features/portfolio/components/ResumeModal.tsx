@@ -76,7 +76,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ onClose }) => {
                 {portfolioConstants.name}
               </h1>
               <p className="mt-1.5 font-mono text-xs font-extrabold uppercase tracking-widest text-indigo-400 print:text-indigo-600">
-                Full Stack Developer | AI Integrations
+                Full Stack Developer (AI Integrations)
               </p>
               
               {/* Contact Nodes */}

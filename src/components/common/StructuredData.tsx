@@ -9,7 +9,7 @@ export const StructuredData: React.FC = () => {
         "@type": "Person",
         "@id": "https://dixit-ankoliya-portfolio.vercel.app/#person",
         "name": portfolioConstants.name,
-        "jobTitle": "Full Stack Developer | AI Integrations",
+        "jobTitle": "Full Stack Developer (AI Integrations)",
         "url": "https://dixit-ankoliya-portfolio.vercel.app",
         "sameAs": [
           portfolioConstants.linkedin,
